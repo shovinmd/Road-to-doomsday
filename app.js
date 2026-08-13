@@ -35,16 +35,16 @@ const MARVEL_ROADMAP = [
     { id: "mcu_26", title: "What If...? — Season 1", year: 2021, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
     { id: "mcu_27", title: "Spider-Man: No Way Home", year: 2021, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" },
     { id: "mcu_28", title: "Doctor Strange in the Multiverse of Madness", year: 2022, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/9G0KivzF2yN0Y9l4m5L0D0K4uG.jpg" },
-    { id: "mcu_29", title: "Loki — Season 2", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/serp9w4.jpg" },
+    { id: "mcu_29", title: "Loki — Season 2", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/voHU1StwKwXFiMVGlGDFBh6TuUt.jpg" },
     { id: "mcu_30", title: "Ant-Man and the Wasp: Quantumania", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/ngl2FKtkIGYmmRkgXiL2vYvaPpB.jpg" },
     { id: "mcu_31", title: "Guardians of the Galaxy Vol. 3", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/r2J02Z2OpNTctfOSN1Yy5TeZe65.jpg" },
     { id: "mcu_32", title: "The Marvels", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/9GBh0gBPyA2jfq.jpg" },
-    { id: "mcu_33", title: "What If...? — Season 2", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/mU4N6363mE5gRjW8q7G9i3N0c.jpg" },
-    { id: "mcu_34", title: "What If...? — Season 3", year: 2024, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/whatif3.jpg" },
+    { id: "mcu_33", title: "What If...? — Season 2", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
+    { id: "mcu_34", title: "What If...? — Season 3", year: 2024, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
     { id: "mcu_35", title: "Deadpool & Wolverine", year: 2024, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
-    { id: "mcu_36", title: "Agatha All Along", year: 2024, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/agatha.jpg" },
-    { id: "mcu_37", title: "The Fantastic Four: First Steps", year: 2025, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/l4pG9.jpg" },
-    { id: "mcu_38", title: "Spider-Man: Brand New Day", year: 2026, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/spidey4.jpg" },
+    { id: "mcu_36", title: "Agatha All Along", year: 2024, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/4yFGyEw1KD66rODplw3voLStiAh.jpg" },
+    { id: "mcu_37", title: "The Fantastic Four: First Steps", year: 2025, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "mcu_38", title: "Spider-Man: Brand New Day", year: 2026, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" },
 
     // MCU — IMPORTANT SUPPORTING STORIES (39 - 52)
     { id: "supp_39", title: "Black Widow", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/qAZ0NmVcYFiWCj3v4yL1yL6.jpg" },
@@ -59,8 +59,8 @@ const MARVEL_ROADMAP = [
     { id: "supp_48", title: "She-Hulk: Attorney at Law", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/hJfI9bZxyK5tD3R.jpg" },
     { id: "supp_49", title: "Werewolf by Night", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/mv8M195wY2tN6A5.jpg" },
     { id: "supp_50", title: "Secret Invasion", year: 2023, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/fT8n3lG7yV0L.jpg" },
-    { id: "supp_51", title: "Echo", year: 2024, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/echo.jpg" },
-    { id: "supp_52", title: "Daredevil: Born Again — Season 1", year: 2025, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/dba1.jpg" },
+    { id: "supp_51", title: "Echo", year: 2024, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/3P52oz9OjhToGlbA28xWBzLw1G.jpg" },
+    { id: "supp_52", title: "Daredevil: Born Again — Season 1", year: 2025, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/Qn3L5R1193Xv7q3k5325.jpg" },
 
     // X-MEN / FOX UNIVERSE (53 - 64)
     { id: "xmen_53", title: "X-Men", year: 2000, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/bRDa2x2YipYy.jpg" },
@@ -87,53 +87,53 @@ const MARVEL_ROADMAP = [
     { id: "tobey_70", title: "Spider-Man 3", year: 2007, category: "TOBEY_SPIDERMAN", categoryName: "Tobey Maguire Spider-Man", part: "TOBEY MAGUIRE SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/2jH.jpg" },
 
     // ANDREW GARFIELD SPIDER-MAN UNIVERSE (71 - 72)
-    { id: "andrew_71", title: "The Amazing Spider-Man", year: 2012, category: "ANDREW_SPIDERMAN", categoryName: "Andrew Garfield Spider-Man", part: "ANDREW GARFIELD SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/dQw4.jpg" },
+    { id: "andrew_71", title: "The Amazing Spider-Man", year: 2012, category: "ANDREW_SPIDERMAN", categoryName: "Andrew Garfield Spider-Man", part: "ANDREW GARFIELD SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/c24.jpg" },
     { id: "andrew_72", title: "The Amazing Spider-Man 2", year: 2014, category: "ANDREW_SPIDERMAN", categoryName: "Andrew Garfield Spider-Man", part: "ANDREW GARFIELD SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/c24.jpg" },
 
     // SONY SPIDER-MAN UNIVERSE (73 - 78)
     { id: "sony_73", title: "Venom", year: 2018, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/2B5.jpg" },
-    { id: "sony_74", title: "Venom: Let There Be Carnage", year: 2021, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/123.jpg" },
-    { id: "sony_75", title: "Morbius", year: 2022, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/456.jpg" },
-    { id: "sony_76", title: "Madame Web", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/789.jpg" },
-    { id: "sony_77", title: "Kraven the Hunter", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/101.jpg" },
-    { id: "sony_78", title: "Venom: The Last Dance", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/102.jpg" },
+    { id: "sony_74", title: "Venom: Let There Be Carnage", year: 2021, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
+    { id: "sony_75", title: "Morbius", year: 2022, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/6ss1PLGYoMDU29Wfqol2L2218w6.jpg" },
+    { id: "sony_76", title: "Madame Web", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/prLXq027xYfG6e2Y3tC1Yd84G1W.jpg" },
+    { id: "sony_77", title: "Kraven the Hunter", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "sony_78", title: "Venom: The Last Dance", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/2B5.jpg" },
 
     // SPIDER-VERSE ANIMATED (79 - 80)
     { id: "sverse_79", title: "Spider-Man: Into the Spider-Verse", year: 2018, category: "ANIMATED_SPIDERVERSE", categoryName: "Spider-Verse (Animated)", part: "SPIDER-VERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/ii2.jpg" },
     { id: "sverse_80", title: "Spider-Man: Across the Spider-Verse", year: 2023, category: "ANIMATED_SPIDERVERSE", categoryName: "Spider-Verse (Animated)", part: "SPIDER-VERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8Vt.jpg" },
 
     // MARVEL ANIMATED / MULTIVERSE (81 - 83)
-    { id: "anim_81", title: "X-Men '97 — Season 1", year: 2024, category: "MARVEL_ANIMATED", categoryName: "Marvel Animated / Multiverse", part: "MARVEL ANIMATED / MULTIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/x97.jpg" },
-    { id: "anim_82", title: "Your Friendly Neighborhood Spider-Man — Season 1", year: 2025, category: "MARVEL_ANIMATED", categoryName: "Marvel Animated / Multiverse", part: "MARVEL ANIMATED / MULTIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/yfns.jpg" },
-    { id: "anim_83", title: "Marvel Zombies — Season 1", year: 2025, category: "MARVEL_ANIMATED", categoryName: "Marvel Animated / Multiverse", part: "MARVEL ANIMATED / MULTIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/zombies.jpg" },
+    { id: "anim_81", title: "X-Men '97 — Season 1", year: 2024, category: "MARVEL_ANIMATED", categoryName: "Marvel Animated / Multiverse", part: "MARVEL ANIMATED / MULTIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
+    { id: "anim_82", title: "Your Friendly Neighborhood Spider-Man — Season 1", year: 2025, category: "MARVEL_ANIMATED", categoryName: "Marvel Animated / Multiverse", part: "MARVEL ANIMATED / MULTIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" },
+    { id: "anim_83", title: "Marvel Zombies — Season 1", year: 2025, category: "MARVEL_ANIMATED", categoryName: "Marvel Animated / Multiverse", part: "MARVEL ANIMATED / MULTIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
 
     // MARVEL TELEVISION / DEFENDERS (84 - 96)
-    { id: "tv_84", title: "Daredevil — Season 1", year: 2015, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/dd1.jpg" },
-    { id: "tv_85", title: "Jessica Jones — Season 1", year: 2015, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/jj1.jpg" },
-    { id: "tv_86", title: "Luke Cage — Season 1", year: 2016, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/lc1.jpg" },
-    { id: "tv_87", title: "Iron Fist — Season 1", year: 2017, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/if1.jpg" },
-    { id: "tv_88", title: "The Defenders", year: 2017, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/def.jpg" },
-    { id: "tv_89", title: "The Punisher — Season 1", year: 2017, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/p1.jpg" },
-    { id: "tv_90", title: "Daredevil — Season 2", year: 2016, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/dd2.jpg" },
-    { id: "tv_91", title: "Luke Cage — Season 2", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/lc2.jpg" },
-    { id: "tv_92", title: "Iron Fist — Season 2", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/if2.jpg" },
-    { id: "tv_93", title: "The Punisher — Season 2", year: 2019, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/p2.jpg" },
-    { id: "tv_94", title: "Daredevil — Season 3", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/dd3.jpg" },
-    { id: "tv_95", title: "Jessica Jones — Season 2", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/jj2.jpg" },
-    { id: "tv_96", title: "Jessica Jones — Season 3", year: 2019, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/jj3.jpg" },
+    { id: "tv_84", title: "Daredevil — Season 1", year: 2015, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/6kbAMLteI9vVJ2B8f.jpg" },
+    { id: "tv_85", title: "Jessica Jones — Season 1", year: 2015, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/4yFGyEw1KD66rODplw3voLStiAh.jpg" },
+    { id: "tv_86", title: "Luke Cage — Season 1", year: 2016, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/1BIoJGKbXjdFDAqM2rXkd2LwYuv.jpg" },
+    { id: "tv_87", title: "Iron Fist — Season 1", year: 2017, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/uGBVj3hEbCoZbD2l9w3b6Vd0A8d.jpg" },
+    { id: "tv_88", title: "The Defenders", year: 2017, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/6kbAMLteI9vVJ2B8f.jpg" },
+    { id: "tv_89", title: "The Punisher — Season 1", year: 2017, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/qAZ0NmVcYFiWCj3v4yL1yL6.jpg" },
+    { id: "tv_90", title: "Daredevil — Season 2", year: 2016, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/6kbAMLteI9vVJ2B8f.jpg" },
+    { id: "tv_91", title: "Luke Cage — Season 2", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/1BIoJGKbXjdFDAqM2rXkd2LwYuv.jpg" },
+    { id: "tv_92", title: "Iron Fist — Season 2", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/uGBVj3hEbCoZbD2l9w3b6Vd0A8d.jpg" },
+    { id: "tv_93", title: "The Punisher — Season 2", year: 2019, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/qAZ0NmVcYFiWCj3v4yL1yL6.jpg" },
+    { id: "tv_94", title: "Daredevil — Season 3", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/6kbAMLteI9vVJ2B8f.jpg" },
+    { id: "tv_95", title: "Jessica Jones — Season 2", year: 2018, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/4yFGyEw1KD66rODplw3voLStiAh.jpg" },
+    { id: "tv_96", title: "Jessica Jones — Season 3", year: 2019, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/4yFGyEw1KD66rODplw3voLStiAh.jpg" },
 
     // OTHER MARVEL UNIVERSES (97 - 101)
-    { id: "other_97", title: "Legion — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/legion1.jpg" },
-    { id: "other_98", title: "Legion — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/legion2.jpg" },
-    { id: "other_99", title: "Legion — Season 3", year: 2019, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/legion3.jpg" },
-    { id: "other_100", title: "The Gifted — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/gifted1.jpg" },
-    { id: "other_101", title: "The Gifted — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/gifted2.jpg" },
+    { id: "other_97", title: "Legion — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vW8b3hB.jpg" },
+    { id: "other_98", title: "Legion — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vW8b3hB.jpg" },
+    { id: "other_99", title: "Legion — Season 3", year: 2019, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vW8b3hB.jpg" },
+    { id: "other_100", title: "The Gifted — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/bRDa2x2YipYy.jpg" },
+    { id: "other_101", title: "The Gifted — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/bRDa2x2YipYy.jpg" },
 
     // EXTRA MULTIVERSE PREPARATION (102 - 105)
-    { id: "extra_102", title: "Captain America: Brave New World", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/bnw.jpg" },
-    { id: "extra_103", title: "Thunderbolts*", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/tb.jpg" },
-    { id: "extra_104", title: "Ironheart", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/ironheart.jpg" },
-    { id: "extra_105", title: "Wonder Man", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/wonderman.jpg" }
+    { id: "extra_102", title: "Captain America: Brave New World", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "extra_103", title: "Thunderbolts*", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/qAZ0NmVcYFiWCj3v4yL1yL6.jpg" },
+    { id: "extra_104", title: "Ironheart", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
+    { id: "extra_105", title: "Wonder Man", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/uGBVj3hEbCoZbD2l9w3b6Vd0A8d.jpg" }
 ];
 
 // LOCALSTORAGE KEY
@@ -292,8 +292,8 @@ class WatchlistApp {
                 // YouTube Trailer Search Query
                 const trailerUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(item.title + ' official trailer')}`;
 
-                // Google Legal India Streaming Search Query
-                const streamingUrl = `https://www.google.com/search?q=${encodeURIComponent(item.title + ' where to watch India legal streaming')}`;
+                // Clean Google Where to Watch Search Query without "India legal streaming"
+                const streamingUrl = `https://www.google.com/search?q=${encodeURIComponent(item.title + ' where to watch')}`;
 
                 let importanceBadgeHTML = "";
                 if (item.importance === "ESSENTIAL") {
@@ -304,8 +304,9 @@ class WatchlistApp {
                     importanceBadgeHTML = `<span class="importance-badge optional" title="Helps understand wider Marvel multiverse">⚪ OPTIONAL</span>`;
                 }
 
-                // Fallback SVG poster generator if TMDB poster fails
-                const svgFallback = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="150" viewBox="0 0 100 150"><rect width="100" height="150" fill="%230D1510"/><rect x="5" y="5" width="90" height="140" fill="none" stroke="%2300E676" stroke-width="1.5" opacity="0.4"/><text x="50" y="70" font-family="sans-serif" font-size="10" font-weight="bold" fill="%2300E676" text-anchor="middle">MARVEL</text><text x="50" y="90" font-family="sans-serif" font-size="8" fill="%23FFFFFF" text-anchor="middle">${encodeURIComponent(item.title.substring(0, 15))}</text></svg>`;
+                // High-quality SVG fallback poster generator with safe single quotes
+                const titleText = encodeURIComponent(item.title.substring(0, 14));
+                const svgFallback = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150' viewBox='0 0 100 150'><rect width='100' height='150' fill='%23050806'/><rect x='4' y='4' width='92' height='142' fill='%230D1510' stroke='%2300E676' stroke-width='1.5' opacity='0.6'/><text x='50' y='65' font-family='sans-serif' font-size='11' font-weight='900' fill='%2300E676' text-anchor='middle'>MARVEL</text><text x='50' y='85' font-family='sans-serif' font-size='8' font-weight='bold' fill='%23F0FDF4' text-anchor='middle'>${titleText}</text></svg>`;
 
                 const card = document.createElement("div");
                 card.className = `movie-card ${isWatched ? 'watched' : ''}`;
@@ -335,7 +336,7 @@ class WatchlistApp {
                         <a href="${trailerUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-trailer" title="Watch official trailer on YouTube">
                             🎬 Watch Trailer
                         </a>
-                        <a href="${streamingUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-where-to-watch" title="Find legal streaming options in India">
+                        <a href="${streamingUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-where-to-watch" title="Search where to watch">
                             🔎 Where to Watch
                         </a>
                     </div>

@@ -3,11 +3,11 @@
    ========================================================================== */
 
 :root {
-    --bg-main: #050806;
-    --bg-card: #0D1510;
-    --bg-card-hover: #131F18;
-    --bg-glass: rgba(13, 21, 16, 0.85);
-    --bg-control: #121C16;
+    --bg-main: #030504;
+    --bg-card: #080D0A;
+    --bg-card-hover: #0E1712;
+    --bg-glass: rgba(8, 13, 10, 0.88);
+    --bg-control: #0D1510;
     
     --accent-green: #00E676;
     --accent-green-bright: #00FF7F;
@@ -19,11 +19,11 @@
     --text-muted: #6B7280;
     
     --border-light: rgba(255, 255, 255, 0.08);
-    --border-green: rgba(0, 230, 118, 0.28);
+    --border-green: rgba(0, 230, 118, 0.35);
     --border-silver: rgba(180, 200, 190, 0.22);
     
-    --shadow-main: 0 12px 40px rgba(0, 0, 0, 0.85);
-    --shadow-glow: 0 0 30px rgba(0, 230, 118, 0.3);
+    --shadow-main: 0 12px 40px rgba(0, 0, 0, 0.95);
+    --shadow-glow: 0 0 35px rgba(0, 230, 118, 0.35);
     
     --font-heading: 'Cinzel', serif;
     --font-body: 'Outfit', sans-serif;
