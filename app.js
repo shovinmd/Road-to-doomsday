@@ -651,7 +651,7 @@ class WatchlistApp {
                     clone.style.left = "-9999px";
                     clone.style.top = "0";
                     clone.style.width = "400px";
-                    clone.style.height = "520px";
+                    clone.style.height = "560px";
                     clone.style.zIndex = "-9999";
                     document.body.appendChild(clone);
 
