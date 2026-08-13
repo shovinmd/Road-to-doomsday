@@ -140,55 +140,25 @@ body {
 }
 
 .hero-logo-wrapper {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.marvel-studios-logo {
-    background: #E51B23;
-    color: #FFFFFF;
-    font-family: var(--font-body);
-    font-weight: 900;
-    font-size: 0.85rem;
-    letter-spacing: 4px;
-    padding: 3px 14px;
-    border: 2px solid #FFFFFF;
-    margin-bottom: 12px;
-    display: inline-block;
-    box-shadow: 0 0 20px rgba(229, 27, 35, 0.6);
-    text-transform: uppercase;
-}
-
-.doomsday-logo-container {
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
 }
 
-.avengers-emblem {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 3px solid var(--accent-green);
-    background: radial-gradient(circle, rgba(0, 230, 118, 0.2) 0%, rgba(13, 21, 16, 0.9) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    box-shadow: 0 0 25px rgba(0, 230, 118, 0.4);
+.hero-doomsday-img {
+    max-width: 480px;
+    width: 88%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 25px rgba(0, 230, 118, 0.45));
+    transition: var(--transition-normal);
 }
 
-.avengers-a {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: #FFFFFF;
-    text-shadow: 0 0 10px var(--accent-green);
-    margin-top: -4px;
+.hero-doomsday-img:hover {
+    filter: drop-shadow(0 0 38px rgba(0, 255, 127, 0.75));
+    transform: scale(1.03);
 }
 
 .doomsday-title-steel {
@@ -923,15 +893,23 @@ body {
     color: var(--text-muted);
 }
 
-/* WHERE TO WATCH BUTTON */
-.btn-where-to-watch {
+/* ACTION BUTTONS: TRAILER & WHERE TO WATCH */
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.btn-action {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     background: var(--bg-control);
     border: 1px solid var(--border-light);
     color: var(--text-secondary);
-    padding: 8px 14px;
+    padding: 7px 12px;
     border-radius: var(--radius-sm);
     font-family: var(--font-body);
     font-size: 0.82rem;
@@ -939,7 +917,13 @@ body {
     text-decoration: none;
     white-space: nowrap;
     transition: var(--transition-fast);
-    flex-shrink: 0;
+}
+
+.btn-trailer:hover {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: #EF4444;
+    color: #EF4444;
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
 }
 
 .btn-where-to-watch:hover {

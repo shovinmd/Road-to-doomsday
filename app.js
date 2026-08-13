@@ -289,8 +289,11 @@ class WatchlistApp {
                 const globalIndex = MARVEL_ROADMAP.findIndex(m => m.id === item.id) + 1;
                 const cardNumber = String(globalIndex).padStart(2, '0');
 
-                // Updated "Where to Watch" Google query without "India legal streaming" as requested
-                const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(item.title + ' where to watch')}`;
+                // YouTube Trailer Search Query
+                const trailerUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(item.title + ' official trailer')}`;
+
+                // Google Legal India Streaming Search Query
+                const streamingUrl = `https://www.google.com/search?q=${encodeURIComponent(item.title + ' where to watch India legal streaming')}`;
 
                 let importanceBadgeHTML = "";
                 if (item.importance === "ESSENTIAL") {
@@ -300,6 +303,9 @@ class WatchlistApp {
                 } else {
                     importanceBadgeHTML = `<span class="importance-badge optional" title="Helps understand wider Marvel multiverse">⚪ OPTIONAL</span>`;
                 }
+
+                // Fallback SVG poster generator if TMDB poster fails
+                const svgFallback = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="150" viewBox="0 0 100 150"><rect width="100" height="150" fill="%230D1510"/><rect x="5" y="5" width="90" height="140" fill="none" stroke="%2300E676" stroke-width="1.5" opacity="0.4"/><text x="50" y="70" font-family="sans-serif" font-size="10" font-weight="bold" fill="%2300E676" text-anchor="middle">MARVEL</text><text x="50" y="90" font-family="sans-serif" font-size="8" fill="%23FFFFFF" text-anchor="middle">${encodeURIComponent(item.title.substring(0, 15))}</text></svg>`;
 
                 const card = document.createElement("div");
                 card.className = `movie-card ${isWatched ? 'watched' : ''}`;
@@ -312,7 +318,7 @@ class WatchlistApp {
                             <span class="checkmark"></span>
                         </label>
                         <span class="item-number">${cardNumber}</span>
-                        <img src="${item.poster}" alt="${item.title} poster" class="poster-img" loading="lazy" onerror="this.src='https://via.placeholder.com/100x150/0D1510/00E676?text=MARVEL'">
+                        <img src="${item.poster}" alt="${item.title} poster" class="poster-img" loading="lazy" onerror="this.onerror=null; this.src='${svgFallback}';">
                         <div class="movie-details">
                             <div class="movie-title-row">
                                 <span class="movie-title">${item.title}</span>
@@ -325,9 +331,14 @@ class WatchlistApp {
                             </div>
                         </div>
                     </div>
-                    <a href="${searchUrl}" target="_blank" rel="noopener noreferrer" class="btn-where-to-watch" title="Search streaming availability">
-                        🔎 Where to Watch
-                    </a>
+                    <div class="card-actions">
+                        <a href="${trailerUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-trailer" title="Watch official trailer on YouTube">
+                            🎬 Watch Trailer
+                        </a>
+                        <a href="${streamingUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-where-to-watch" title="Find legal streaming options in India">
+                            🔎 Where to Watch
+                        </a>
+                    </div>
                 `;
 
                 grid.appendChild(card);
