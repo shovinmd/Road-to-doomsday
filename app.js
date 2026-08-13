@@ -650,8 +650,8 @@ class WatchlistApp {
                     clone.style.position = "fixed";
                     clone.style.left = "-9999px";
                     clone.style.top = "0";
-                    clone.style.width = "420px";
-                    clone.style.height = "600px";
+                    clone.style.width = "440px";
+                    clone.style.height = "640px";
                     clone.style.zIndex = "-9999";
                     document.body.appendChild(clone);
 
@@ -666,32 +666,16 @@ class WatchlistApp {
                         link.href = canvas.toDataURL("image/png");
                         link.click();
                         
-                        this.copyToast.textContent = "Card Image Saved! 📸✨";
+                        this.copyToast.textContent = "Card Image Downloaded! 📥✨";
                         this.copyToast.classList.remove("hidden");
                         setTimeout(() => {
                             this.copyToast.classList.add("hidden");
-                            this.copyToast.textContent = "Copied to Clipboard! 📋✨";
                         }, 2200);
                     }).catch(err => {
                         if (document.body.contains(clone)) document.body.removeChild(clone);
                         console.error("Failed to save image", err);
                     });
                 }
-            });
-        }
-
-        if (this.copyShareBtn) {
-            this.copyShareBtn.addEventListener("click", () => {
-                if (!this.shareCopyText) this.updateShareCardData();
-                navigator.clipboard.writeText(this.shareCopyText).then(() => {
-                    this.copyToast.textContent = "Copied to Clipboard! 📋✨";
-                    this.copyToast.classList.remove("hidden");
-                    setTimeout(() => {
-                        this.copyToast.classList.add("hidden");
-                    }, 2200);
-                }).catch(err => {
-                    console.error("Clipboard copy failed", err);
-                });
             });
         }
 
