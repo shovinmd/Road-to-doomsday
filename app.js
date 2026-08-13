@@ -184,15 +184,84 @@ class WatchlistApp {
         this.confirmResetBtn = document.getElementById("confirmResetBtn");
     }
 
-    // LIVE COUNTDOWN TIMER TO DECEMBER 18, 2026
+    // LIVE COUNTDOWN TIMER TO DECEMBER 18, 2026 WITH MONTHS, DAYS, HOURS, MINUTES, SECONDS & AUDIO
     initCountdown() {
-        const targetDate = new Date("2026-12-18T00:00:00Z").getTime();
-        
-        const updateTimer = () => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+        const targetDate = new Date("2026-12-18T00:00:00Z");
+        this.soundEnabled = true;
 
-            if (distance < 0) {
+        // Clock Ticking Sound Generator (Web Audio API)
+        const playClockTick = () => {
+            if (!this.soundEnabled) return;
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                if (!AudioCtx) return;
+                if (!this.audioCtx) {
+                    this.audioCtx = new AudioCtx();
+                }
+                if (this.audioCtx.state === "suspended") {
+                    this.audioCtx.resume();
+                }
+                
+                const osc = this.audioCtx.createOscillator();
+                const gain = this.audioCtx.createGain();
+                osc.type = "sine";
+                osc.frequency.setValueAtTime(900, this.audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(140, this.audioCtx.currentTime + 0.035);
+                
+                gain.gain.setValueAtTime(0.12, this.audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, this.audioCtx.currentTime + 0.035);
+                
+                osc.connect(gain);
+                gain.connect(this.audioCtx.destination);
+                osc.start();
+                osc.stop(this.audioCtx.currentTime + 0.035);
+            } catch (e) {
+                console.log("Clock sound tick error", e);
+            }
+        };
+
+        // Resume AudioContext on any initial user interaction (for browser autoplay policies)
+        const unlockAudio = () => {
+            if (this.audioCtx && this.audioCtx.state === "suspended") {
+                this.audioCtx.resume();
+            }
+            window.removeEventListener("click", unlockAudio);
+            window.removeEventListener("keydown", unlockAudio);
+            window.removeEventListener("touchstart", unlockAudio);
+        };
+        window.addEventListener("click", unlockAudio);
+        window.addEventListener("keydown", unlockAudio);
+        window.addEventListener("touchstart", unlockAudio);
+
+        const soundBtn = document.getElementById("soundToggleBtn");
+        const soundIcon = document.getElementById("soundIcon");
+        const soundText = document.getElementById("soundText");
+
+        if (soundBtn) {
+            soundBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                this.soundEnabled = !this.soundEnabled;
+                if (this.soundEnabled) {
+                    soundIcon.textContent = "🔊";
+                    soundText.textContent = "Sound: ON";
+                    soundBtn.style.borderColor = "var(--accent-green)";
+                    soundBtn.style.color = "var(--accent-green)";
+                    soundBtn.style.background = "rgba(0, 230, 118, 0.18)";
+                    playClockTick();
+                } else {
+                    soundIcon.textContent = "🔇";
+                    soundText.textContent = "Sound: OFF";
+                    soundBtn.style.borderColor = "rgba(255, 255, 255, 0.2)";
+                    soundBtn.style.color = "rgba(255, 255, 255, 0.5)";
+                    soundBtn.style.background = "rgba(255, 255, 255, 0.05)";
+                }
+            });
+        }
+
+        const updateTimer = () => {
+            const now = new Date();
+            if (now >= targetDate) {
+                document.getElementById("months").textContent = "00";
                 document.getElementById("days").textContent = "00";
                 document.getElementById("hours").textContent = "00";
                 document.getElementById("minutes").textContent = "00";
@@ -200,15 +269,43 @@ class WatchlistApp {
                 return;
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Accurate MONTHS, DAYS, HOURS, MINUTES, SECONDS breakdown
+            let targetYear = targetDate.getUTCFullYear();
+            let targetMonth = targetDate.getUTCMonth();
+            
+            let currentYear = now.getUTCFullYear();
+            let currentMonth = now.getUTCMonth();
+            
+            let months = (targetYear - currentYear) * 12 + (targetMonth - currentMonth);
+            
+            let tempDate = new Date(now);
+            tempDate.setUTCMonth(tempDate.getUTCMonth() + months);
+            
+            if (tempDate > targetDate) {
+                months--;
+                tempDate = new Date(now);
+                tempDate.setUTCMonth(tempDate.getUTCMonth() + months);
+            }
 
+            let diffMs = targetDate - tempDate;
+            let days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            diffMs -= days * (1000 * 60 * 60 * 24);
+
+            let hours = Math.floor(diffMs / (1000 * 60 * 60));
+            diffMs -= hours * (1000 * 60 * 60);
+
+            let minutes = Math.floor(diffMs / (1000 * 60));
+            diffMs -= minutes * (1000 * 60);
+
+            let seconds = Math.floor(diffMs / 1000);
+
+            document.getElementById("months").textContent = String(months).padStart(2, '0');
             document.getElementById("days").textContent = String(days).padStart(2, '0');
             document.getElementById("hours").textContent = String(hours).padStart(2, '0');
             document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
             document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+
+            playClockTick();
         };
 
         updateTimer();

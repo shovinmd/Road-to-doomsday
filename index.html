@@ -44,36 +44,44 @@
             
             <p class="subtitle">THE ULTIMATE MARVEL MULTIVERSE WATCHLIST</p>
 
-            <!-- COUNTDOWN CARD WITH FADE & PULSE ANIMATION -->
-            <div class="hero-countdown-card glass-panel fade-in-glow">
+            <!-- COUNTDOWN CARD -->
+            <div class="countdown-card">
                 <div class="countdown-header">
-                    <span class="hourglass-icon">⏳</span> COUNTDOWN TO AVENGERS: DOOMSDAY
+                    <span class="countdown-label">DOOMSDAY IS COMING</span>
+                    <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle clock ticking sound">
+                        <span id="soundIcon">🔊</span> <span id="soundText">Sound: ON</span>
+                    </button>
                 </div>
-                
-                <div class="countdown-grid" id="countdown">
-                    <div class="time-block">
-                        <span class="time-number" id="days">00</span>
-                        <span class="time-label">DAYS</span>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="timer-unit">
+                        <span class="timer-number" id="months">00</span>
+                        <span class="timer-label">MONTHS</span>
                     </div>
-                    <div class="time-colon">:</div>
-                    <div class="time-block">
-                        <span class="time-number" id="hours">00</span>
-                        <span class="time-label">HOURS</span>
+                    <span class="timer-colon">:</span>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="days">00</span>
+                        <span class="timer-label">DAYS</span>
                     </div>
-                    <div class="time-colon">:</div>
-                    <div class="time-block">
-                        <span class="time-number" id="minutes">00</span>
-                        <span class="time-label">MINUTES</span>
+                    <span class="timer-colon">:</span>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="hours">00</span>
+                        <span class="timer-label">HOURS</span>
                     </div>
-                    <div class="time-colon">:</div>
-                    <div class="time-block">
-                        <span class="time-number" id="seconds">00</span>
-                        <span class="time-label">SECONDS</span>
+                    <span class="timer-colon">:</span>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="minutes">00</span>
+                        <span class="timer-label">MINUTES</span>
+                    </div>
+                    <span class="timer-colon">:</span>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="seconds">00</span>
+                        <span class="timer-label">SECONDS</span>
                     </div>
                 </div>
-
-                <div class="release-date">December 18, 2026</div>
-                <div class="tagline">Your journey through the Marvel Multiverse starts here.</div>
+                <div class="countdown-footer">
+                    <span class="release-date">DECEMBER 18, 2026</span>
+                    <span class="footer-tagline">Your journey through the Marvel Multiverse starts here.</span>
+                </div>
             </div>
 
             <!-- MARVEL JOURNEY MILESTONE TRACKER -->

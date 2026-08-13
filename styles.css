@@ -50,13 +50,21 @@ html {
 
 body {
     background-color: var(--bg-main);
+    background-image: linear-gradient(rgba(3, 5, 4, 0.88), rgba(3, 5, 4, 0.92)), url('doomsday_bg.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: var(--text-primary);
     font-family: var(--font-body);
-    line-height: 1.6;
     min-height: 100vh;
     overflow-x: hidden;
-    position: relative;
-    padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
 }
 
 /* Ambient Background Lights */
@@ -290,6 +298,153 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+/* COUNTDOWN CARD — DOOMSDAY IS COMING DESIGN */
+.countdown-card {
+    background: rgba(8, 14, 10, 0.75);
+    border: 1px solid rgba(0, 230, 118, 0.3);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    max-width: 680px;
+    width: 100%;
+    margin: 20px auto;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 230, 118, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 0 4px;
+}
+
+.countdown-label {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 0 22px rgba(0, 230, 118, 0.5);
+    text-transform: uppercase;
+}
+
+.sound-toggle-btn {
+    background: rgba(0, 230, 118, 0.12);
+    border: 1px solid rgba(0, 230, 118, 0.4);
+    color: var(--accent-green);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition-normal);
+}
+
+.sound-toggle-btn:hover {
+    background: rgba(0, 230, 118, 0.25);
+    box-shadow: 0 0 18px rgba(0, 230, 118, 0.4);
+    transform: translateY(-1px);
+}
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 14px 0 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.timer-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 68px;
+}
+
+.timer-number {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.85), 0 0 25px rgba(0, 230, 118, 0.65);
+}
+
+.timer-colon {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: -18px;
+    text-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+}
+
+.timer-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+.countdown-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 14px;
+    width: 100%;
+}
+
+.release-date {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 2.5px;
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+.footer-tagline {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 640px) {
+    .countdown-card {
+        padding: 18px 14px;
+    }
+    .countdown-timer {
+        gap: 6px;
+    }
+    .timer-unit {
+        min-width: 44px;
+    }
+    .timer-number {
+        font-size: 1.65rem;
+    }
+    .timer-colon {
+        font-size: 1.4rem;
+        margin-top: -12px;
+    }
+    .timer-label {
+        font-size: 0.58rem;
+        letter-spacing: 1px;
+    }
 }
 
 .countdown-grid {
