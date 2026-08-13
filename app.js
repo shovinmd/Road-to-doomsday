@@ -184,13 +184,14 @@ class WatchlistApp {
         this.confirmResetBtn = document.getElementById("confirmResetBtn");
     }
 
-    // LIVE COUNTDOWN TIMER TO DECEMBER 18, 2026 WITH MONTHS, DAYS, HOURS, MINUTES, SECONDS & AUDIO
+    // LIVE COUNTDOWN TIMER TO DECEMBER 18, 2026 WITH MONTHS, DAYS, HOURS, MINUTES, SECONDS & AUTOPLAY AUDIO
     initCountdown() {
         const targetDate = new Date("2026-12-18T00:00:00Z");
         this.soundEnabled = true;
+        const clockAudio = document.getElementById("clockAudio");
 
-        // Clock Ticking Sound Generator (Web Audio API)
-        const playClockTick = () => {
+        // Web Audio fallback oscillator for tick sync
+        const playOscillatorTick = () => {
             if (!this.soundEnabled) return;
             try {
                 const AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -201,37 +202,60 @@ class WatchlistApp {
                 if (this.audioCtx.state === "suspended") {
                     this.audioCtx.resume();
                 }
-                
                 const osc = this.audioCtx.createOscillator();
                 const gain = this.audioCtx.createGain();
                 osc.type = "sine";
                 osc.frequency.setValueAtTime(900, this.audioCtx.currentTime);
                 osc.frequency.exponentialRampToValueAtTime(140, this.audioCtx.currentTime + 0.035);
-                
                 gain.gain.setValueAtTime(0.12, this.audioCtx.currentTime);
                 gain.gain.exponentialRampToValueAtTime(0.001, this.audioCtx.currentTime + 0.035);
-                
                 osc.connect(gain);
                 gain.connect(this.audioCtx.destination);
                 osc.start();
                 osc.stop(this.audioCtx.currentTime + 0.035);
             } catch (e) {
-                console.log("Clock sound tick error", e);
+                console.log("Oscillator tick error", e);
             }
         };
 
-        // Resume AudioContext on any initial user interaction (for browser autoplay policies)
-        const unlockAudio = () => {
-            if (this.audioCtx && this.audioCtx.state === "suspended") {
-                this.audioCtx.resume();
+        // Instant playback helper
+        const playSoundNow = () => {
+            if (!this.soundEnabled) return;
+            if (clockAudio) {
+                const playPromise = clockAudio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // If autoplay blocked by browser policy, play synth tick instead
+                        playOscillatorTick();
+                    });
+                }
+            } else {
+                playOscillatorTick();
             }
-            window.removeEventListener("click", unlockAudio);
-            window.removeEventListener("keydown", unlockAudio);
-            window.removeEventListener("touchstart", unlockAudio);
         };
-        window.addEventListener("click", unlockAudio);
-        window.addEventListener("keydown", unlockAudio);
-        window.addEventListener("touchstart", unlockAudio);
+
+        // Try playing sound immediately on page load
+        playSoundNow();
+
+        // Also trigger sound on any user interaction (mousemove, scroll, touch, click, keydown)
+        const unlockAudio = () => {
+            if (this.soundEnabled) {
+                playSoundNow();
+            }
+            window.removeEventListener("pointerdown", unlockAudio);
+            window.removeEventListener("mousemove", unlockAudio);
+            window.removeEventListener("scroll", unlockAudio);
+            window.removeEventListener("touchstart", unlockAudio);
+            window.removeEventListener("keydown", unlockAudio);
+            window.removeEventListener("click", unlockAudio);
+        };
+
+        window.addEventListener("pointerdown", unlockAudio, { once: true });
+        window.addEventListener("mousemove", unlockAudio, { once: true });
+        window.addEventListener("scroll", unlockAudio, { once: true });
+        window.addEventListener("touchstart", unlockAudio, { once: true });
+        window.addEventListener("keydown", unlockAudio, { once: true });
+        window.addEventListener("click", unlockAudio, { once: true });
 
         const soundBtn = document.getElementById("soundToggleBtn");
         const soundIcon = document.getElementById("soundIcon");
@@ -247,13 +271,14 @@ class WatchlistApp {
                     soundBtn.style.borderColor = "var(--accent-green)";
                     soundBtn.style.color = "var(--accent-green)";
                     soundBtn.style.background = "rgba(0, 230, 118, 0.18)";
-                    playClockTick();
+                    playSoundNow();
                 } else {
                     soundIcon.textContent = "🔇";
                     soundText.textContent = "Sound: OFF";
                     soundBtn.style.borderColor = "rgba(255, 255, 255, 0.2)";
                     soundBtn.style.color = "rgba(255, 255, 255, 0.5)";
                     soundBtn.style.background = "rgba(255, 255, 255, 0.05)";
+                    if (clockAudio) clockAudio.pause();
                 }
             });
         }
