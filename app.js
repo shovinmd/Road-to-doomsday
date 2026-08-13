@@ -6,7 +6,7 @@
 const MARVEL_ROADMAP = [
     // MCU — INFINITY SAGA (1 - 23)
     { id: "mcu_01", title: "Iron Man", year: 2008, category: "MCU_INFINITY", categoryName: "MCU — Infinity Saga", part: "MCU — INFINITY SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
-    { id: "mcu_02", title: "The Incredible Hulk", year: 2008, category: "MCU_INFINITY", categoryName: "MCU — Infinity Saga", part: "MCU — INFINITY SAGA", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/gKtx8P2P7xYv82y9w3B89yJp46c.jpg" },
+    { id: "mcu_02", title: "The Incredible Hulk", year: 2008, category: "MCU_INFINITY", categoryName: "MCU — Infinity Saga", part: "MCU — INFINITY SAGA", importance: "OPTIONAL", poster: "https://www.movienewsletters.net/photos/277217R1.jpg" },
     { id: "mcu_03", title: "Iron Man 2", year: 2010, category: "MCU_INFINITY", categoryName: "MCU — Infinity Saga", part: "MCU — INFINITY SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/6ss1PLGYoMDU29Wfqol2L2218w6.jpg" },
     { id: "mcu_04", title: "Thor", year: 2011, category: "MCU_INFINITY", categoryName: "MCU — Infinity Saga", part: "MCU — INFINITY SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/prLXq027xYfG6e2Y3tC1Yd84G1W.jpg" },
     { id: "mcu_05", title: "Captain America: The First Avenger", year: 2011, category: "MCU_INFINITY", categoryName: "MCU — Infinity Saga", part: "MCU — INFINITY SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
