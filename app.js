@@ -642,12 +642,25 @@ class WatchlistApp {
                 const isFlipped = this.shareCardInner.classList.contains("flipped");
                 const cardElement = isFlipped ? document.getElementById("shareCardBack") : document.getElementById("shareCardFront");
 
-                if (window.html2canvas) {
-                    window.html2canvas(cardElement, {
+                if (window.html2canvas && cardElement) {
+                    // Create an un-transformed clone to prevent html2canvas 3D rotation mirroring bug
+                    const clone = cardElement.cloneNode(true);
+                    clone.style.transform = "none";
+                    clone.style.webkitTransform = "none";
+                    clone.style.position = "fixed";
+                    clone.style.left = "-9999px";
+                    clone.style.top = "0";
+                    clone.style.width = "400px";
+                    clone.style.height = "520px";
+                    clone.style.zIndex = "-9999";
+                    document.body.appendChild(clone);
+
+                    window.html2canvas(clone, {
                         backgroundColor: "#060b08",
-                        scale: 2,
+                        scale: 3,
                         useCORS: true
                     }).then(canvas => {
+                        document.body.removeChild(clone);
                         const link = document.createElement("a");
                         link.download = `doomsday-progress-card-${isFlipped ? "back" : "front"}.png`;
                         link.href = canvas.toDataURL("image/png");
@@ -660,6 +673,7 @@ class WatchlistApp {
                             this.copyToast.textContent = "Copied to Clipboard! 📋✨";
                         }, 2200);
                     }).catch(err => {
+                        if (document.body.contains(clone)) document.body.removeChild(clone);
                         console.error("Failed to save image", err);
                     });
                 }
