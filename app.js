@@ -182,6 +182,15 @@ class WatchlistApp {
         this.resetModal = document.getElementById("resetModal");
         this.cancelResetBtn = document.getElementById("cancelResetBtn");
         this.confirmResetBtn = document.getElementById("confirmResetBtn");
+
+        // Share Card elements
+        this.shareBtn = document.getElementById("shareBtn");
+        this.shareModal = document.getElementById("shareModal");
+        this.closeShareModalBtn = document.getElementById("closeShareModalBtn");
+        this.shareCardInner = document.getElementById("shareCardInner");
+        this.flipCardBtn = document.getElementById("flipCardBtn");
+        this.copyShareBtn = document.getElementById("copyShareBtn");
+        this.copyToast = document.getElementById("copyToast");
     }
 
     // LIVE COUNTDOWN TIMER TO DECEMBER 18, 2026 WITH MONTHS, DAYS, HOURS, MINUTES, SECONDS & AUTOPLAY AUDIO
@@ -537,8 +546,110 @@ class WatchlistApp {
         }
     }
 
+    // UPDATE SHARE CARD DATA
+    updateShareCardData() {
+        const total = MARVEL_ROADMAP.length; // 105
+        const watched = this.watchedSet.size;
+        const remaining = total - watched;
+        const percentage = Math.round((watched / total) * 100);
+
+        let rankTitle = "RECRUIT";
+        let rankIcon = "🚀";
+
+        if (watched === 0) {
+            rankTitle = "RECRUIT";
+            rankIcon = "🚀";
+        } else if (watched < 25) {
+            rankTitle = "MULTIVERSE INITIATE";
+            rankIcon = "🍿";
+        } else if (watched < 55) {
+            rankTitle = "MULTIVERSE EXPLORER";
+            rankIcon = "🌀";
+        } else if (watched < 80) {
+            rankTitle = "X-MEN & AVENGERS VETERAN";
+            rankIcon = "🧬";
+        } else if (watched < 105) {
+            rankTitle = "MULTIVERSE MASTER";
+            rankIcon = "🕷️";
+        } else {
+            rankTitle = "DOOMSDAY READY";
+            rankIcon = "👑";
+        }
+
+        const months = document.getElementById("months") ? document.getElementById("months").textContent : "04";
+        const days = document.getElementById("days") ? document.getElementById("days").textContent : "12";
+
+        document.getElementById("shareHeadline").textContent = watched === 105 ? "READY FOR DOOMSDAY! 👑" : "ON MY WAY TO DOOMSDAY! 🍿";
+        document.getElementById("shareRankIcon").textContent = rankIcon;
+        document.getElementById("shareRankTitle").textContent = rankTitle;
+        document.getElementById("shareWatchedNum").textContent = watched;
+        document.getElementById("shareRemainingNum").textContent = remaining;
+        document.getElementById("sharePercentText").textContent = `${percentage}%`;
+        document.getElementById("shareProgressFill").style.width = `${percentage}%`;
+        document.getElementById("shareCountdownSummary").textContent = `Counting down: ${months}m ${days}d to Dec 18, 2026`;
+
+        // Formatted clipboard text summary
+        const copyText = `🎬 MY ROAD TO DOOMSDAY PROGRESS 🍿\n` +
+                         `━━━━━━━━━━━━━━━━━━━━━\n` +
+                         `👑 Rank: ${rankIcon} ${rankTitle}\n` +
+                         `🍿 Watched: ${watched} / ${total} Titles (${percentage}% Complete)\n` +
+                         `⏳ Remaining: ${remaining} Titles to Watch\n` +
+                         `📅 Avengers: Doomsday — Dec 18, 2026\n` +
+                         `━━━━━━━━━━━━━━━━━━━━━\n` +
+                         `Track your journey: https://github.com/shovinmd/Road-to-doomsday`;
+
+        const previewEl = document.getElementById("shareCopyPreview");
+        if (previewEl) {
+            previewEl.textContent = copyText;
+        }
+        this.shareCopyText = copyText;
+    }
+
     // EVENT LISTENERS
     attachEventListeners() {
+        // Share Progress Button click handler
+        if (this.shareBtn) {
+            this.shareBtn.addEventListener("click", () => {
+                this.updateShareCardData();
+                this.shareCardInner.classList.remove("flipped");
+                this.shareModal.classList.remove("hidden");
+            });
+        }
+
+        if (this.closeShareModalBtn) {
+            this.closeShareModalBtn.addEventListener("click", () => {
+                this.shareModal.classList.add("hidden");
+            });
+        }
+
+        if (this.shareModal) {
+            this.shareModal.addEventListener("click", (e) => {
+                if (e.target === this.shareModal) {
+                    this.shareModal.classList.add("hidden");
+                }
+            });
+        }
+
+        if (this.flipCardBtn) {
+            this.flipCardBtn.addEventListener("click", () => {
+                this.shareCardInner.classList.toggle("flipped");
+            });
+        }
+
+        if (this.copyShareBtn) {
+            this.copyShareBtn.addEventListener("click", () => {
+                if (!this.shareCopyText) this.updateShareCardData();
+                navigator.clipboard.writeText(this.shareCopyText).then(() => {
+                    this.copyToast.classList.remove("hidden");
+                    setTimeout(() => {
+                        this.copyToast.classList.add("hidden");
+                    }, 2200);
+                }).catch(err => {
+                    console.error("Clipboard copy failed", err);
+                });
+            });
+        }
+
         this.universeContainer.addEventListener("change", (e) => {
             if (e.target.matches("input[type='checkbox']")) {
                 const id = e.target.dataset.id;

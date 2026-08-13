@@ -134,6 +134,9 @@
                 <div class="progress-info-row">
                     <div class="watchlist-title-group">
                         <h2 class="section-title">YOUR WATCHLIST</h2>
+                        <button id="shareBtn" class="btn-share-small" title="Share your Doomsday progress card">
+                            📤 Share Progress
+                        </button>
                         <button id="resetBtn" class="btn-reset-small" title="Reset all progress">
                             🔄 Reset Progress
                         </button>
@@ -230,6 +233,97 @@
                 <button id="cancelResetBtn" class="btn-secondary">Cancel</button>
                 <button id="confirmResetBtn" class="btn-danger">Yes, Reset Progress</button>
             </div>
+        </div>
+    </div>
+
+    <!-- SHARE PROGRESS FLIP CARD MODAL -->
+    <div id="shareModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
+        <div class="share-modal-content">
+            <button id="closeShareModalBtn" class="close-share-btn" aria-label="Close share modal">✕</button>
+            
+            <div class="share-card-container" id="shareCardContainer">
+                <div class="share-card-inner" id="shareCardInner">
+                    
+                    <!-- FRONT OF SHARE CARD -->
+                    <div class="share-card-face share-card-front">
+                        <div class="share-card-header">
+                            <img src="doomsday_logo.png" alt="Doomsday Logo" class="share-doomsday-logo">
+                            <div class="share-card-tag">ROAD TO DOOMSDAY</div>
+                        </div>
+
+                        <h2 class="share-headline" id="shareHeadline">ON MY WAY TO DOOMSDAY! 🍿</h2>
+                        
+                        <div class="share-rank-badge" id="shareRankBadge">
+                            <span id="shareRankIcon">🚀</span> <span id="shareRankTitle">RECRUIT</span>
+                        </div>
+
+                        <div class="share-stats-box">
+                            <div class="share-stat-item">
+                                <span class="stat-number" id="shareWatchedNum">0</span>
+                                <span class="stat-label">TITLES WATCHED</span>
+                            </div>
+                            <div class="share-stat-divider"></div>
+                            <div class="share-stat-item">
+                                <span class="stat-number" id="shareRemainingNum">105</span>
+                                <span class="stat-label">TITLES REMAINING</span>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar in Card -->
+                        <div class="share-progress-wrapper">
+                            <div class="share-progress-header">
+                                <span>MULTIVERSE PROGRESS</span>
+                                <span id="sharePercentText">0%</span>
+                            </div>
+                            <div class="share-progress-bar">
+                                <div class="share-progress-fill" id="shareProgressFill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="share-countdown-badge">
+                            <span class="countdown-icon">⏳</span>
+                            <span id="shareCountdownSummary">Counting down to Dec 18, 2026</span>
+                        </div>
+
+                        <div class="share-card-footer">
+                            <span>shovinmd.github.io/Road-to-doomsday</span>
+                        </div>
+                    </div>
+
+                    <!-- BACK OF SHARE CARD -->
+                    <div class="share-card-face share-card-back">
+                        <div class="share-card-header">
+                            <img src="doomsday_logo.png" alt="Doomsday Logo" class="share-doomsday-logo">
+                            <div class="share-card-tag">MULTIVERSE WATCHLIST</div>
+                        </div>
+
+                        <div class="share-quote-box">
+                            <p class="share-quote">"Whatever it takes. The Multiverse will collapse on December 18, 2026."</p>
+                        </div>
+
+                        <div class="share-summary-text-box">
+                            <pre id="shareCopyPreview">Loading summary...</pre>
+                        </div>
+
+                        <div class="share-card-footer">
+                            <span>#RoadToDoomsday #AvengersDoomsday</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MODAL BUTTONS -->
+            <div class="share-modal-actions">
+                <button id="flipCardBtn" class="btn-share-action btn-flip" title="Flip card to back/front">
+                    🔄 Flip Card
+                </button>
+                <button id="copyShareBtn" class="btn-share-action btn-copy" title="Copy progress to clipboard">
+                    📋 Copy Progress Summary
+                </button>
+            </div>
+            
+            <div id="copyToast" class="copy-toast hidden">Copied to Clipboard! 📋✨</div>
         </div>
     </div>
 

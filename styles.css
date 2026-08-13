@@ -1272,8 +1272,355 @@ body {
 }
 
 /* ==========================================================================
-   6. FOOTER
+   6. FOOTER & SHARE PROGRESS MODAL
    ========================================================================== */
+
+.btn-share-small {
+    background: rgba(0, 230, 118, 0.12);
+    border: 1px solid rgba(0, 230, 118, 0.4);
+    color: var(--accent-green);
+    padding: 5px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-share-small:hover {
+    background: rgba(0, 230, 118, 0.28);
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.4);
+    transform: translateY(-1px);
+}
+
+.share-modal-content {
+    background: rgba(5, 10, 7, 0.95);
+    border: 1px solid rgba(0, 230, 118, 0.4);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px 24px;
+    max-width: 440px;
+    width: 92%;
+    position: relative;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 230, 118, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-share-btn {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    z-index: 10;
+}
+
+.close-share-btn:hover {
+    background: rgba(255, 82, 82, 0.3);
+    border-color: #FF5252;
+    color: #FF5252;
+}
+
+/* 3D FLIP CARD CONTAINER */
+.share-card-container {
+    perspective: 1000px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.share-card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 410px;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.share-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.share-card-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 24px 20px;
+    background: linear-gradient(145deg, rgba(12, 22, 16, 0.95), rgba(4, 8, 5, 0.98));
+    border: 2px solid rgba(0, 230, 118, 0.45);
+    box-shadow: inset 0 0 25px rgba(0, 230, 118, 0.1), 0 10px 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.share-card-back {
+    transform: rotateY(180deg);
+}
+
+.share-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.share-doomsday-logo {
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.6));
+}
+
+.share-card-tag {
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: var(--accent-green);
+    background: rgba(0, 230, 118, 0.12);
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+.share-headline {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    margin: 12px 0 8px;
+    text-align: center;
+}
+
+.share-rank-badge {
+    background: linear-gradient(90deg, rgba(0, 230, 118, 0.2), rgba(0, 230, 118, 0.05));
+    border: 1px solid rgba(0, 230, 118, 0.5);
+    border-radius: var(--radius-md);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 4px 0 14px;
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.2);
+}
+
+#shareRankIcon {
+    font-size: 1.3rem;
+}
+
+#shareRankTitle {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.share-stats-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 12px 8px;
+    margin-bottom: 12px;
+}
+
+.share-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent-green);
+    text-shadow: 0 0 12px rgba(0, 230, 118, 0.5);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 4px;
+}
+
+.share-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.share-progress-wrapper {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.share-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+}
+
+.share-progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.share-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00E676, #00B0FF);
+    border-radius: 100px;
+    box-shadow: 0 0 12px #00E676;
+}
+
+.share-countdown-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 8px;
+}
+
+.share-card-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 8px;
+    text-align: center;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.share-quote-box {
+    background: rgba(0, 230, 118, 0.08);
+    border-left: 3px solid var(--accent-green);
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+.share-quote {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+}
+
+.share-summary-text-box {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    max-height: 160px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#shareCopyPreview {
+    font-family: monospace;
+    font-size: 0.72rem;
+    color: var(--accent-green);
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+}
+
+/* MODAL ACTION BUTTONS */
+.share-modal-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn-share-action {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: var(--transition-fast);
+}
+
+.btn-flip {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+}
+
+.btn-flip:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #FFFFFF;
+}
+
+.btn-copy {
+    background: var(--accent-green);
+    border: none;
+    color: #050806;
+}
+
+.btn-copy:hover {
+    background: var(--accent-green-bright);
+    box-shadow: 0 0 18px var(--accent-green);
+}
+
+.copy-toast {
+    position: absolute;
+    bottom: -45px;
+    background: #00E676;
+    color: #050806;
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 8px 18px;
+    border-radius: 100px;
+    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.5);
+    transition: var(--transition-normal);
+}
 
 .footer {
     text-align: center;
