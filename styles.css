@@ -1384,10 +1384,19 @@ body {
     width: 100%;
 }
 
-.share-doomsday-logo {
-    height: 38px;
+.centered-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.share-doomsday-logo-large {
+    height: 54px;
+    max-width: 220px;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.6));
+    filter: drop-shadow(0 0 16px rgba(0, 230, 118, 0.7));
+    transition: var(--transition-fast);
 }
 
 .share-card-tag {
@@ -1596,6 +1605,18 @@ body {
 .btn-flip:hover {
     background: rgba(255, 255, 255, 0.18);
     border-color: #FFFFFF;
+}
+
+.btn-download {
+    background: rgba(0, 176, 255, 0.15);
+    border: 1px solid #00B0FF;
+    color: #00B0FF;
+}
+
+.btn-download:hover {
+    background: rgba(0, 176, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 176, 255, 0.4);
+    transform: translateY(-1px);
 }
 
 .btn-copy {

@@ -245,9 +245,9 @@
                 <div class="share-card-inner" id="shareCardInner">
                     
                     <!-- FRONT OF SHARE CARD -->
-                    <div class="share-card-face share-card-front">
-                        <div class="share-card-header">
-                            <img src="doomsday_logo.png" alt="Doomsday Logo" class="share-doomsday-logo">
+                    <div class="share-card-face share-card-front" id="shareCardFront">
+                        <div class="share-card-header centered-header">
+                            <img src="doomsday_logo.png" alt="Doomsday Logo" class="share-doomsday-logo-large">
                             <div class="share-card-tag">ROAD TO DOOMSDAY</div>
                         </div>
 
@@ -260,12 +260,12 @@
                         <div class="share-stats-box">
                             <div class="share-stat-item">
                                 <span class="stat-number" id="shareWatchedNum">0</span>
-                                <span class="stat-label">TITLES WATCHED</span>
+                                <span class="stat-label">MOVIES WATCHED</span>
                             </div>
                             <div class="share-stat-divider"></div>
                             <div class="share-stat-item">
                                 <span class="stat-number" id="shareRemainingNum">105</span>
-                                <span class="stat-label">TITLES REMAINING</span>
+                                <span class="stat-label">MOVIES REMAINING</span>
                             </div>
                         </div>
 
@@ -286,14 +286,14 @@
                         </div>
 
                         <div class="share-card-footer">
-                            <span>shovinmd.github.io/Road-to-doomsday</span>
+                            <span>https://road-to-doomsday-five.vercel.app/</span>
                         </div>
                     </div>
 
                     <!-- BACK OF SHARE CARD -->
-                    <div class="share-card-face share-card-back">
-                        <div class="share-card-header">
-                            <img src="doomsday_logo.png" alt="Doomsday Logo" class="share-doomsday-logo">
+                    <div class="share-card-face share-card-back" id="shareCardBack">
+                        <div class="share-card-header centered-header">
+                            <img src="doomsday_logo.png" alt="Doomsday Logo" class="share-doomsday-logo-large">
                             <div class="share-card-tag">MULTIVERSE WATCHLIST</div>
                         </div>
 
@@ -306,7 +306,7 @@
                         </div>
 
                         <div class="share-card-footer">
-                            <span>#RoadToDoomsday #AvengersDoomsday</span>
+                            <span>https://road-to-doomsday-five.vercel.app/ • #AvengersDoomsday</span>
                         </div>
                     </div>
 
@@ -318,8 +318,11 @@
                 <button id="flipCardBtn" class="btn-share-action btn-flip" title="Flip card to back/front">
                     🔄 Flip Card
                 </button>
-                <button id="copyShareBtn" class="btn-share-action btn-copy" title="Copy progress to clipboard">
-                    📋 Copy Progress Summary
+                <button id="downloadCardBtn" class="btn-share-action btn-download" title="Save card as PNG image">
+                    📸 Save Image
+                </button>
+                <button id="copyShareBtn" class="btn-share-action btn-copy" title="Copy progress text summary">
+                    📋 Copy Text
                 </button>
             </div>
             
@@ -327,7 +330,9 @@
         </div>
     </div>
 
-    <!-- Script -->
+    <!-- html2canvas library for saving card as image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Main Script -->
     <script src="app.js"></script>
 </body>
 </html>

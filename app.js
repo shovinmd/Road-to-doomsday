@@ -189,6 +189,7 @@ class WatchlistApp {
         this.closeShareModalBtn = document.getElementById("closeShareModalBtn");
         this.shareCardInner = document.getElementById("shareCardInner");
         this.flipCardBtn = document.getElementById("flipCardBtn");
+        this.downloadCardBtn = document.getElementById("downloadCardBtn");
         this.copyShareBtn = document.getElementById("copyShareBtn");
         this.copyToast = document.getElementById("copyToast");
     }
@@ -592,11 +593,11 @@ class WatchlistApp {
         const copyText = `🎬 MY ROAD TO DOOMSDAY PROGRESS 🍿\n` +
                          `━━━━━━━━━━━━━━━━━━━━━\n` +
                          `👑 Rank: ${rankIcon} ${rankTitle}\n` +
-                         `🍿 Watched: ${watched} / ${total} Titles (${percentage}% Complete)\n` +
-                         `⏳ Remaining: ${remaining} Titles to Watch\n` +
+                         `🍿 Watched: ${watched} / ${total} Movies & Shows (${percentage}% Complete)\n` +
+                         `⏳ Remaining: ${remaining} Movies Left\n` +
                          `📅 Avengers: Doomsday — Dec 18, 2026\n` +
                          `━━━━━━━━━━━━━━━━━━━━━\n` +
-                         `Track your journey: https://github.com/shovinmd/Road-to-doomsday`;
+                         `🌐 Track your journey: https://road-to-doomsday-five.vercel.app/`;
 
         const previewEl = document.getElementById("shareCopyPreview");
         if (previewEl) {
@@ -636,10 +637,40 @@ class WatchlistApp {
             });
         }
 
+        if (this.downloadCardBtn) {
+            this.downloadCardBtn.addEventListener("click", () => {
+                const isFlipped = this.shareCardInner.classList.contains("flipped");
+                const cardElement = isFlipped ? document.getElementById("shareCardBack") : document.getElementById("shareCardFront");
+
+                if (window.html2canvas) {
+                    window.html2canvas(cardElement, {
+                        backgroundColor: "#060b08",
+                        scale: 2,
+                        useCORS: true
+                    }).then(canvas => {
+                        const link = document.createElement("a");
+                        link.download = `doomsday-progress-card-${isFlipped ? "back" : "front"}.png`;
+                        link.href = canvas.toDataURL("image/png");
+                        link.click();
+                        
+                        this.copyToast.textContent = "Card Image Saved! 📸✨";
+                        this.copyToast.classList.remove("hidden");
+                        setTimeout(() => {
+                            this.copyToast.classList.add("hidden");
+                            this.copyToast.textContent = "Copied to Clipboard! 📋✨";
+                        }, 2200);
+                    }).catch(err => {
+                        console.error("Failed to save image", err);
+                    });
+                }
+            });
+        }
+
         if (this.copyShareBtn) {
             this.copyShareBtn.addEventListener("click", () => {
                 if (!this.shareCopyText) this.updateShareCardData();
                 navigator.clipboard.writeText(this.shareCopyText).then(() => {
+                    this.copyToast.textContent = "Copied to Clipboard! 📋✨";
                     this.copyToast.classList.remove("hidden");
                     setTimeout(() => {
                         this.copyToast.classList.add("hidden");
