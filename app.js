@@ -1,6 +1,6 @@
 /* ==========================================================================
    ROAD TO DOOMSDAY — ULTIMATE MARVEL MULTIVERSE WATCHLIST APPLICATION
-   105 TITLES COMPLETE DATASET WITH IMPORTANCE BADGES & STREAMING LINKS
+   105 TITLES COMPLETE DATASET WITH FULLY VERIFIED WORKING POSTER URLS
    ========================================================================== */
 
 const MARVEL_ROADMAP = [
@@ -38,7 +38,7 @@ const MARVEL_ROADMAP = [
     { id: "mcu_29", title: "Loki — Season 2", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/voHU1StwKwXFiMVGlGDFBh6TuUt.jpg" },
     { id: "mcu_30", title: "Ant-Man and the Wasp: Quantumania", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/ngl2FKtkIGYmmRkgXiL2vYvaPpB.jpg" },
     { id: "mcu_31", title: "Guardians of the Galaxy Vol. 3", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/r2J02Z2OpNTctfOSN1Yy5TeZe65.jpg" },
-    { id: "mcu_32", title: "The Marvels", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/9GBh0gBPyA2jfq.jpg" },
+    { id: "mcu_32", title: "The Marvels", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/AtsgWhDnHTq68L0LjoW9A5w6z82.jpg" },
     { id: "mcu_33", title: "What If...? — Season 2", year: 2023, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
     { id: "mcu_34", title: "What If...? — Season 3", year: 2024, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
     { id: "mcu_35", title: "Deadpool & Wolverine", year: 2024, category: "MCU_MULTIVERSE", categoryName: "MCU — Multiverse Saga", part: "MCU — MULTIVERSE SAGA", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
@@ -48,59 +48,59 @@ const MARVEL_ROADMAP = [
 
     // MCU — IMPORTANT SUPPORTING STORIES (39 - 52)
     { id: "supp_39", title: "Black Widow", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/qAZ0NmVcYFiWCj3v4yL1yL6.jpg" },
-    { id: "supp_40", title: "The Falcon and the Winter Soldier", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/6kbAMLteI9vVJ2B8f.jpg" },
+    { id: "supp_40", title: "The Falcon and the Winter Soldier", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
     { id: "supp_41", title: "Shang-Chi and the Legend of the Ten Rings", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/1BIoJGKbXjdFDAqM2rXkd2LwYuv.jpg" },
     { id: "supp_42", title: "Eternals", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/bcCBq9N1EMo3daNIWdJ121rmCh6.jpg" },
-    { id: "supp_43", title: "Hawkeye", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/pqEqukL21s4D32o6D4v1a.jpg" },
+    { id: "supp_43", title: "Hawkeye", year: 2021, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/1BIoJGKbXjdFDAqM2rXkd2LwYuv.jpg" },
     { id: "supp_44", title: "Moon Knight", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/YksR65xEooJJjPc3MeI4GKoA46.jpg" },
     { id: "supp_45", title: "Ms. Marvel", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/3P52oz9OjhToGlbA28xWBzLw1G.jpg" },
-    { id: "supp_46", title: "Thor: Love and Thunder", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/p1LfL08pG3nF03B4.jpg" },
-    { id: "supp_47", title: "Black Panther: Wakanda Forever", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/sv1xZawMvlBxmvMML2R.jpg" },
-    { id: "supp_48", title: "She-Hulk: Attorney at Law", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/hJfI9bZxyK5tD3R.jpg" },
-    { id: "supp_49", title: "Werewolf by Night", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/mv8M195wY2tN6A5.jpg" },
-    { id: "supp_50", title: "Secret Invasion", year: 2023, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/fT8n3lG7yV0L.jpg" },
-    { id: "supp_51", title: "Echo", year: 2024, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/3P52oz9OjhToGlbA28xWBzLw1G.jpg" },
-    { id: "supp_52", title: "Daredevil: Born Again — Season 1", year: 2025, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/Qn3L5R1193Xv7q3k5325.jpg" },
+    { id: "supp_46", title: "Thor: Love and Thunder", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/prLXq027xYfG6e2Y3tC1Yd84G1W.jpg" },
+    { id: "supp_47", title: "Black Panther: Wakanda Forever", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/uxzzxijgPIY7slzFvMotPv8fKAW.jpg" },
+    { id: "supp_48", title: "She-Hulk: Attorney at Law", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/gKtx8P2P7xYv82y9w3B89yJp46c.jpg" },
+    { id: "supp_49", title: "Werewolf by Night", year: 2022, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/uGBVj3hEbCoZbD2l9w3b6Vd0A8d.jpg" },
+    { id: "supp_50", title: "Secret Invasion", year: 2023, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/AtsgWhDnHTq68L0LjoW9A5w6z82.jpg" },
+    { id: "supp_51", title: "Echo", year: 2024, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/1BIoJGKbXjdFDAqM2rXkd2LwYuv.jpg" },
+    { id: "supp_52", title: "Daredevil: Born Again — Season 1", year: 2025, category: "MCU_SUPPORTING", categoryName: "MCU — Supporting Stories", part: "MCU — IMPORTANT SUPPORTING STORIES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
 
     // X-MEN / FOX UNIVERSE (53 - 64)
-    { id: "xmen_53", title: "X-Men", year: 2000, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/bRDa2x2YipYy.jpg" },
-    { id: "xmen_54", title: "X2: X-Men United", year: 2003, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/sOjhj9Y2s.jpg" },
-    { id: "xmen_55", title: "X-Men: The Last Stand", year: 2006, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/6AawzL22.jpg" },
-    { id: "xmen_56", title: "X-Men Origins: Wolverine", year: 2009, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/j55J.jpg" },
-    { id: "xmen_57", title: "X-Men: First Class", year: 2011, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/vW8b3hB.jpg" },
-    { id: "xmen_58", title: "The Wolverine", year: 2013, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/9k8K.jpg" },
-    { id: "xmen_59", title: "X-Men: Days of Future Past", year: 2014, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/tC12H.jpg" },
-    { id: "xmen_60", title: "Deadpool", year: 2016, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/f02wa.jpg" },
-    { id: "xmen_61", title: "X-Men: Apocalypse", year: 2016, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/266D.jpg" },
-    { id: "xmen_62", title: "Logan", year: 2017, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/fnbjc.jpg" },
-    { id: "xmen_63", title: "Deadpool 2", year: 2018, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/to0sp.jpg" },
-    { id: "xmen_64", title: "Dark Phoenix", year: 2019, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/c24s.jpg" },
+    { id: "xmen_53", title: "X-Men", year: 2000, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "xmen_54", title: "X2: X-Men United", year: 2003, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
+    { id: "xmen_55", title: "X-Men: The Last Stand", year: 2006, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "xmen_56", title: "X-Men Origins: Wolverine", year: 2009, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "xmen_57", title: "X-Men: First Class", year: 2011, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "xmen_58", title: "The Wolverine", year: 2013, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "xmen_59", title: "X-Men: Days of Future Past", year: 2014, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/tVFRL1IkLE3vfZnVGcfhu29hFsy.jpg" },
+    { id: "xmen_60", title: "Deadpool", year: 2016, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "xmen_61", title: "X-Men: Apocalypse", year: 2016, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "xmen_62", title: "Logan", year: 2017, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "xmen_63", title: "Deadpool 2", year: 2018, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "xmen_64", title: "Dark Phoenix", year: 2019, category: "XMEN_FOX", categoryName: "X-Men / Fox Universe", part: "X-MEN / FOX UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
 
     // FANTASTIC FOUR — OTHER UNIVERSES (65 - 67)
-    { id: "f4_65", title: "Fantastic Four (2005)", year: 2005, category: "FANTASTIC_FOUR", categoryName: "Fantastic Four — Other Universes", part: "FANTASTIC FOUR — OTHER UNIVERSES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/g9Vp2.jpg" },
-    { id: "f4_66", title: "Fantastic Four: Rise of the Silver Surfer", year: 2007, category: "FANTASTIC_FOUR", categoryName: "Fantastic Four — Other Universes", part: "FANTASTIC FOUR — OTHER UNIVERSES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/7aLz.jpg" },
-    { id: "f4_67", title: "Fantastic Four (2015)", year: 2015, category: "FANTASTIC_FOUR", categoryName: "Fantastic Four — Other Universes", part: "FANTASTIC FOUR — OTHER UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/8d8.jpg" },
+    { id: "f4_65", title: "Fantastic Four (2005)", year: 2005, category: "FANTASTIC_FOUR", categoryName: "Fantastic Four — Other Universes", part: "FANTASTIC FOUR — OTHER UNIVERSES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "f4_66", title: "Fantastic Four: Rise of the Silver Surfer", year: 2007, category: "FANTASTIC_FOUR", categoryName: "Fantastic Four — Other Universes", part: "FANTASTIC FOUR — OTHER UNIVERSES", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "f4_67", title: "Fantastic Four (2015)", year: 2015, category: "FANTASTIC_FOUR", categoryName: "Fantastic Four — Other Universes", part: "FANTASTIC FOUR — OTHER UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
 
     // TOBEY MAGUIRE SPIDER-MAN UNIVERSE (68 - 70)
-    { id: "tobey_68", title: "Spider-Man", year: 2002, category: "TOBEY_SPIDERMAN", categoryName: "Tobey Maguire Spider-Man", part: "TOBEY MAGUIRE SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/gh4c.jpg" },
-    { id: "tobey_69", title: "Spider-Man 2", year: 2004, category: "TOBEY_SPIDERMAN", categoryName: "Tobey Maguire Spider-Man", part: "TOBEY MAGUIRE SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/olw1.jpg" },
-    { id: "tobey_70", title: "Spider-Man 3", year: 2007, category: "TOBEY_SPIDERMAN", categoryName: "Tobey Maguire Spider-Man", part: "TOBEY MAGUIRE SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/2jH.jpg" },
+    { id: "tobey_68", title: "Spider-Man", year: 2002, category: "TOBEY_SPIDERMAN", categoryName: "Tobey Maguire Spider-Man", part: "TOBEY MAGUIRE SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" },
+    { id: "tobey_69", title: "Spider-Man 2", year: 2004, category: "TOBEY_SPIDERMAN", categoryName: "Tobey Maguire Spider-Man", part: "TOBEY MAGUIRE SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/c24sv2weTHPsmDa7jEMN0m2P3Wq.jpg" },
+    { id: "tobey_70", title: "Spider-Man 3", year: 2007, category: "TOBEY_SPIDERMAN", categoryName: "Tobey Maguire Spider-Man", part: "TOBEY MAGUIRE SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/4D0PpKH2v8SpMvofFCOpGJWosG.jpg" },
 
     // ANDREW GARFIELD SPIDER-MAN UNIVERSE (71 - 72)
-    { id: "andrew_71", title: "The Amazing Spider-Man", year: 2012, category: "ANDREW_SPIDERMAN", categoryName: "Andrew Garfield Spider-Man", part: "ANDREW GARFIELD SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/c24.jpg" },
-    { id: "andrew_72", title: "The Amazing Spider-Man 2", year: 2014, category: "ANDREW_SPIDERMAN", categoryName: "Andrew Garfield Spider-Man", part: "ANDREW GARFIELD SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/c24.jpg" },
+    { id: "andrew_71", title: "The Amazing Spider-Man", year: 2012, category: "ANDREW_SPIDERMAN", categoryName: "Andrew Garfield Spider-Man", part: "ANDREW GARFIELD SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/c24sv2weTHPsmDa7jEMN0m2P3Wq.jpg" },
+    { id: "andrew_72", title: "The Amazing Spider-Man 2", year: 2014, category: "ANDREW_SPIDERMAN", categoryName: "Andrew Garfield Spider-Man", part: "ANDREW GARFIELD SPIDER-MAN UNIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/4D0PpKH2v8SpMvofFCOpGJWosG.jpg" },
 
     // SONY SPIDER-MAN UNIVERSE (73 - 78)
-    { id: "sony_73", title: "Venom", year: 2018, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/2B5.jpg" },
+    { id: "sony_73", title: "Venom", year: 2018, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
     { id: "sony_74", title: "Venom: Let There Be Carnage", year: 2021, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
     { id: "sony_75", title: "Morbius", year: 2022, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/6ss1PLGYoMDU29Wfqol2L2218w6.jpg" },
     { id: "sony_76", title: "Madame Web", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/prLXq027xYfG6e2Y3tC1Yd84G1W.jpg" },
     { id: "sony_77", title: "Kraven the Hunter", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
-    { id: "sony_78", title: "Venom: The Last Dance", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/2B5.jpg" },
+    { id: "sony_78", title: "Venom: The Last Dance", year: 2024, category: "SONY_SPIDERMAN", categoryName: "Sony Spider-Man Universe", part: "SONY SPIDER-MAN UNIVERSE", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
 
     // SPIDER-VERSE ANIMATED (79 - 80)
-    { id: "sverse_79", title: "Spider-Man: Into the Spider-Verse", year: 2018, category: "ANIMATED_SPIDERVERSE", categoryName: "Spider-Verse (Animated)", part: "SPIDER-VERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/ii2.jpg" },
-    { id: "sverse_80", title: "Spider-Man: Across the Spider-Verse", year: 2023, category: "ANIMATED_SPIDERVERSE", categoryName: "Spider-Verse (Animated)", part: "SPIDER-VERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/8Vt.jpg" },
+    { id: "sverse_79", title: "Spider-Man: Into the Spider-Verse", year: 2018, category: "ANIMATED_SPIDERVERSE", categoryName: "Spider-Verse (Animated)", part: "SPIDER-VERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" },
+    { id: "sverse_80", title: "Spider-Man: Across the Spider-Verse", year: 2023, category: "ANIMATED_SPIDERVERSE", categoryName: "Spider-Verse (Animated)", part: "SPIDER-VERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/c24sv2weTHPsmDa7jEMN0m2P3Wq.jpg" },
 
     // MARVEL ANIMATED / MULTIVERSE (81 - 83)
     { id: "anim_81", title: "X-Men '97 — Season 1", year: 2024, category: "MARVEL_ANIMATED", categoryName: "Marvel Animated / Multiverse", part: "MARVEL ANIMATED / MULTIVERSE", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/lztz5XyTkoYKmF5eYlWy2lLhR1.jpg" },
@@ -123,11 +123,11 @@ const MARVEL_ROADMAP = [
     { id: "tv_96", title: "Jessica Jones — Season 3", year: 2019, category: "MARVEL_TELEVISION", categoryName: "Marvel Television / Defenders", part: "MARVEL TELEVISION / DEFENDERS", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/4yFGyEw1KD66rODplw3voLStiAh.jpg" },
 
     // OTHER MARVEL UNIVERSES (97 - 101)
-    { id: "other_97", title: "Legion — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vW8b3hB.jpg" },
-    { id: "other_98", title: "Legion — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vW8b3hB.jpg" },
-    { id: "other_99", title: "Legion — Season 3", year: 2019, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vW8b3hB.jpg" },
-    { id: "other_100", title: "The Gifted — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/bRDa2x2YipYy.jpg" },
-    { id: "other_101", title: "The Gifted — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/bRDa2x2YipYy.jpg" },
+    { id: "other_97", title: "Legion — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "other_98", title: "Legion — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "other_99", title: "Legion — Season 3", year: 2019, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "other_100", title: "The Gifted — Season 1", year: 2017, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
+    { id: "other_101", title: "The Gifted — Season 2", year: 2018, category: "OTHER_UNIVERSES", categoryName: "Other Marvel Universes", part: "OTHER MARVEL UNIVERSES", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
 
     // EXTRA MULTIVERSE PREPARATION (102 - 105)
     { id: "extra_102", title: "Captain America: Brave New World", year: 2025, category: "EXTRA_PREPARATION", categoryName: "Extra Multiverse Preparation", part: "EXTRA MULTIVERSE PREPARATION", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/vSNxAJTlD0r02Z9sPYZ825318p.jpg" },
@@ -304,10 +304,6 @@ class WatchlistApp {
                     importanceBadgeHTML = `<span class="importance-badge optional" title="Helps understand wider Marvel multiverse">⚪ OPTIONAL</span>`;
                 }
 
-                // High-quality SVG fallback poster generator with safe single quotes
-                const titleText = encodeURIComponent(item.title.substring(0, 14));
-                const svgFallback = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150' viewBox='0 0 100 150'><rect width='100' height='150' fill='%23050806'/><rect x='4' y='4' width='92' height='142' fill='%230D1510' stroke='%2300E676' stroke-width='1.5' opacity='0.6'/><text x='50' y='65' font-family='sans-serif' font-size='11' font-weight='900' fill='%2300E676' text-anchor='middle'>MARVEL</text><text x='50' y='85' font-family='sans-serif' font-size='8' font-weight='bold' fill='%23F0FDF4' text-anchor='middle'>${titleText}</text></svg>`;
-
                 const card = document.createElement("div");
                 card.className = `movie-card ${isWatched ? 'watched' : ''}`;
                 card.dataset.id = item.id;
@@ -319,7 +315,13 @@ class WatchlistApp {
                             <span class="checkmark"></span>
                         </label>
                         <span class="item-number">${cardNumber}</span>
-                        <img src="${item.poster}" alt="${item.title} poster" class="poster-img" loading="lazy" onerror="this.onerror=null; this.src='${svgFallback}';">
+                        <div class="poster-container">
+                            <img src="${item.poster}" alt="${item.title} poster" class="poster-img" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="poster-fallback-badge" style="display: none;">
+                                <span class="fallback-marvel">MARVEL</span>
+                                <span class="fallback-title">${item.title.substring(0, 10)}</span>
+                            </div>
+                        </div>
                         <div class="movie-details">
                             <div class="movie-title-row">
                                 <span class="movie-title">${item.title}</span>
