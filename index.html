@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road to Doomsday — The Ultimate Marvel Multiverse Watchlist</title>
+    <meta name="description" content="Track your ultimate Marvel Multiverse viewing journey before Avengers: Doomsday (Dec 18, 2026). Live countdown, importance badges, streaming guide, and browser progress saving.">
+    <meta name="theme-color" content="#050806">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
+    <div class="background-grid"></div>
+
+    <div class="container">
+
+        <!-- TOP HERO SECTION -->
+        <header class="hero-section">
+            <div class="hero-logo-wrapper">
+                <!-- MARVEL STUDIOS OFFICIAL LOGO -->
+                <div class="marvel-studios-logo">MARVEL STUDIOS</div>
+
+                <!-- AVENGERS DOOMSDAY LOGO / BANNER -->
+                <div class="doomsday-logo-container pulse-animation">
+                    <div class="avengers-emblem">
+                        <span class="avengers-a">A</span>
+                    </div>
+                    <div class="doomsday-title-steel">AVENGERS</div>
+                    <div class="doomsday-sub-emerald">DOOMSDAY</div>
+                </div>
+            </div>
+
+            <div class="hero-badge">
+                <span class="badge-dot"></span> MARVEL MULTIVERSE
+            </div>
+            
+            <h1 class="main-title">
+                ROAD TO <span class="text-gradient">DOOMSDAY</span>
+            </h1>
+            
+            <p class="subtitle">THE ULTIMATE MARVEL MULTIVERSE WATCHLIST</p>
+
+            <!-- COUNTDOWN CARD WITH FADE & PULSE ANIMATION -->
+            <div class="hero-countdown-card glass-panel fade-in-glow">
+                <div class="countdown-header">
+                    <span class="hourglass-icon">⏳</span> COUNTDOWN TO AVENGERS: DOOMSDAY
+                </div>
+                
+                <div class="countdown-grid" id="countdown">
+                    <div class="time-block">
+                        <span class="time-number" id="days">00</span>
+                        <span class="time-label">DAYS</span>
+                    </div>
+                    <div class="time-colon">:</div>
+                    <div class="time-block">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">HOURS</span>
+                    </div>
+                    <div class="time-colon">:</div>
+                    <div class="time-block">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">MINUTES</span>
+                    </div>
+                    <div class="time-colon">:</div>
+                    <div class="time-block">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">SECONDS</span>
+                    </div>
+                </div>
+
+                <div class="release-date">December 18, 2026</div>
+                <div class="tagline">Your journey through the Marvel Multiverse starts here.</div>
+            </div>
+
+            <!-- MARVEL JOURNEY MILESTONE TRACKER -->
+            <div class="journey-tracker-card glass-panel">
+                <h3 class="journey-title">YOUR MARVEL JOURNEY</h3>
+                <div class="journey-steps" id="journeySteps">
+                    <div class="step-node active" id="node-started">
+                        <div class="step-icon">🚀</div>
+                        <div class="step-text">Started</div>
+                    </div>
+                    <div class="step-line" id="line-1"></div>
+                    
+                    <div class="step-node" id="node-progress">
+                        <div class="step-icon">🍿</div>
+                        <div class="step-text" id="node-progress-text">12 Watched</div>
+                    </div>
+                    <div class="step-line" id="line-2"></div>
+                    
+                    <div class="step-node" id="node-multiverse">
+                        <div class="step-icon">🌀</div>
+                        <div class="step-text">Multiverse Unlocked</div>
+                    </div>
+                    <div class="step-line" id="line-3"></div>
+                    
+                    <div class="step-node" id="node-xmen">
+                        <div class="step-icon">🧬</div>
+                        <div class="step-text">X-Men Done</div>
+                    </div>
+                    <div class="step-line" id="line-4"></div>
+                    
+                    <div class="step-node" id="node-spider">
+                        <div class="step-icon">🕷️</div>
+                        <div class="step-text">Spider-Verse Done</div>
+                    </div>
+                    <div class="step-line" id="line-5"></div>
+                    
+                    <div class="step-node" id="node-doomsday">
+                        <div class="step-icon">👑</div>
+                        <div class="step-text">DOOMSDAY READY</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN WATCHLIST & PROGRESS AREA -->
+        <main class="watchlist-section">
+            <div class="watchlist-header-bar glass-panel">
+                <div class="progress-info-row">
+                    <div class="watchlist-title-group">
+                        <h2 class="section-title">YOUR WATCHLIST</h2>
+                        <button id="resetBtn" class="btn-reset-small" title="Reset all progress">
+                            🔄 Reset Progress
+                        </button>
+                    </div>
+                    <div class="progress-stats" id="progressStats">
+                        <span class="watched-count" id="watchedCount">0 / 105</span> Watched
+                        <span class="stats-separator">•</span>
+                        <span class="percentage-badge" id="percentageBadge">0% Complete</span>
+                    </div>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progressBarFill" style="width: 0%;">
+                        <div class="progress-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEARCH + FILTERS -->
+            <section class="controls-section glass-panel">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search 105 movies, shows, characters, years..." aria-label="Search movies & shows">
+                    <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear search">✕</button>
+                </div>
+
+                <div class="filter-controls">
+                    <div class="select-wrapper">
+                        <select id="universeFilter" aria-label="Filter by Universe">
+                            <option value="ALL">All Universes</option>
+                            <option value="MCU_INFINITY">MCU — Infinity Saga</option>
+                            <option value="MCU_MULTIVERSE">MCU — Multiverse Saga</option>
+                            <option value="MCU_SUPPORTING">MCU — Supporting Stories</option>
+                            <option value="XMEN_FOX">X-Men / Fox Universe</option>
+                            <option value="FANTASTIC_FOUR">Fantastic Four — Other Universes</option>
+                            <option value="TOBEY_SPIDERMAN">Tobey Maguire Spider-Man</option>
+                            <option value="ANDREW_SPIDERMAN">Andrew Garfield Spider-Man</option>
+                            <option value="SONY_SPIDERMAN">Sony Spider-Man Universe</option>
+                            <option value="ANIMATED_SPIDERVERSE">Spider-Verse (Animated)</option>
+                            <option value="MARVEL_ANIMATED">Marvel Animated / Multiverse</option>
+                            <option value="MARVEL_TELEVISION">Marvel Television / Defenders</option>
+                            <option value="OTHER_UNIVERSES">Other Marvel Universes</option>
+                            <option value="EXTRA_PREPARATION">Extra Multiverse Preparation</option>
+                        </select>
+                        <span class="select-arrow">▾</span>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="importanceFilter" aria-label="Filter by Importance">
+                            <option value="ALL">All Importance</option>
+                            <option value="ESSENTIAL">🔴 ESSENTIAL Only</option>
+                            <option value="IMPORTANT">🟡 IMPORTANT Only</option>
+                            <option value="OPTIONAL">⚪ OPTIONAL Only</option>
+                        </select>
+                        <span class="select-arrow">▾</span>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="statusFilter" aria-label="Filter by Status">
+                            <option value="ALL">All Status</option>
+                            <option value="WATCHED">Watched Only</option>
+                            <option value="UNWATCHED">Not Watched</option>
+                        </select>
+                        <span class="select-arrow">▾</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UNIVERSE SECTIONS & MOVIE LIST CONTAINER -->
+            <div id="universeContainer" class="universe-container">
+                <!-- Dynamically Populated by app.js -->
+            </div>
+
+            <!-- EMPTY STATE -->
+            <div id="emptyState" class="empty-state hidden">
+                <div class="empty-icon">🔍</div>
+                <h3>No Marvel Titles Found</h3>
+                <p>Try adjusting your search terms or filters.</p>
+                <button id="resetFiltersBtn" class="btn-primary">Clear All Filters</button>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>ROAD TO DOOMSDAY — Marvel Multiverse Fan Watchlist</p>
+            <p class="footer-sub">Avengers: Doomsday releases in theaters December 18, 2026. All 105 titles and progress saved locally.</p>
+        </footer>
+
+    </div>
+
+    <!-- RESET CONFIRMATION MODAL -->
+    <div id="resetModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content glass-panel">
+            <h3 id="modalTitle">Reset Watch Progress?</h3>
+            <p>Are you sure you want to clear your saved watched status? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button id="cancelResetBtn" class="btn-secondary">Cancel</button>
+                <button id="confirmResetBtn" class="btn-danger">Yes, Reset Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>

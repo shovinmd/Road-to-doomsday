@@ -1,0 +1,1194 @@
+/* ==========================================================================
+   ROAD TO DOOMSDAY — DOOM GREEN & BLACK CINEMATIC DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+    --bg-main: #050806;
+    --bg-card: #0D1510;
+    --bg-card-hover: #131F18;
+    --bg-glass: rgba(13, 21, 16, 0.85);
+    --bg-control: #121C16;
+    
+    --accent-green: #00E676;
+    --accent-green-bright: #00FF7F;
+    --accent-green-dark: #059669;
+    --accent-green-subtle: rgba(0, 230, 118, 0.15);
+    
+    --text-primary: #F0FDF4;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    
+    --border-light: rgba(255, 255, 255, 0.08);
+    --border-green: rgba(0, 230, 118, 0.28);
+    --border-silver: rgba(180, 200, 190, 0.22);
+    
+    --shadow-main: 0 12px 40px rgba(0, 0, 0, 0.85);
+    --shadow-glow: 0 0 30px rgba(0, 230, 118, 0.3);
+    
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Outfit', sans-serif;
+    
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+/* Ambient Background Lights */
+.ambient-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(140px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.55;
+}
+
+.glow-top {
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(0, 230, 118, 0.22) 0%, rgba(5, 150, 105, 0.1) 60%, transparent 100%);
+}
+
+.glow-bottom {
+    bottom: -200px;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 255, 127, 0.12) 0%, transparent 70%);
+}
+
+.background-grid {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-silver);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-main);
+}
+
+/* Helper Utilities */
+.hidden {
+    display: none !important;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #FFFFFF 20%, var(--accent-green) 80%, var(--accent-green-bright) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 230, 118, 0.35);
+}
+
+/* ==========================================================================
+   1. HERO SECTION & AVENGERS DOOMSDAY LOGO BANNER
+   ========================================================================== */
+
+.hero-section {
+    text-align: center;
+    padding: 30px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-logo-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marvel-studios-logo {
+    background: #E51B23;
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    padding: 3px 14px;
+    border: 2px solid #FFFFFF;
+    margin-bottom: 12px;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(229, 27, 35, 0.6);
+    text-transform: uppercase;
+}
+
+.doomsday-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.avengers-emblem {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-green);
+    background: radial-gradient(circle, rgba(0, 230, 118, 0.2) 0%, rgba(13, 21, 16, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    box-shadow: 0 0 25px rgba(0, 230, 118, 0.4);
+}
+
+.avengers-a {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px var(--accent-green);
+    margin-top: -4px;
+}
+
+.doomsday-title-steel {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #E2E8F0;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 0, 0, 0.9);
+    line-height: 0.9;
+}
+
+.doomsday-sub-emerald {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    text-shadow: 0 0 25px var(--accent-green), 0 0 50px rgba(0, 230, 118, 0.4);
+    line-height: 1.1;
+}
+
+/* PULSE & FADE ANIMATIONS */
+.pulse-animation {
+    animation: heroPulse 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes heroPulse {
+    0% { transform: scale(0.98); opacity: 0.9; }
+    100% { transform: scale(1.02); opacity: 1; filter: drop-shadow(0 0 20px rgba(0, 230, 118, 0.4)); }
+}
+
+.fade-in-glow {
+    animation: fadeInGlow 1.5s ease-out forwards;
+}
+
+@keyframes fadeInGlow {
+    from { opacity: 0; transform: translateY(20px); box-shadow: 0 0 0 transparent; }
+    to { opacity: 1; transform: translateY(0); box-shadow: var(--shadow-glow); }
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-green-subtle);
+    color: var(--accent-green);
+    border: 1px solid var(--border-green);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-green-bright);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 16px var(--accent-green-bright); }
+    100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: clamp(0.85rem, 2vw, 1.05rem);
+    color: var(--text-secondary);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+/* COUNTDOWN CARD */
+.hero-countdown-card {
+    width: 100%;
+    max-width: 720px;
+    padding: 32px 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    border: 1px solid var(--border-green);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-countdown-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+}
+
+.countdown-header {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.countdown-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.time-block {
+    background: rgba(5, 11, 7, 0.75);
+    border: 1px solid var(--border-green);
+    border-radius: var(--radius-md);
+    padding: 14px 20px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 15px rgba(0, 230, 118, 0.08);
+}
+
+.time-number {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+}
+
+.time-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.time-colon {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent-green);
+    opacity: 0.7;
+    margin-top: -12px;
+}
+
+.release-date {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* MARVEL JOURNEY MILESTONE TRACKER */
+.journey-tracker-card {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+
+.journey-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.journey-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 8px 4px 12px 4px;
+    gap: 8px;
+}
+
+.step-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 85px;
+    opacity: 0.4;
+    transition: var(--transition-normal);
+}
+
+.step-node.active {
+    opacity: 1;
+}
+
+.step-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--bg-control);
+    border: 2px solid var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    transition: var(--transition-fast);
+}
+
+.step-node.active .step-icon {
+    border-color: var(--accent-green);
+    background: var(--accent-green-subtle);
+    box-shadow: 0 0 15px var(--accent-green-subtle);
+    transform: scale(1.1);
+}
+
+.step-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.step-node.active .step-text {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background: var(--border-light);
+    min-width: 20px;
+    margin-top: -18px;
+    transition: var(--transition-normal);
+}
+
+.step-line.active {
+    background: linear-gradient(90deg, var(--accent-green), var(--accent-green-dark));
+    box-shadow: 0 0 8px var(--accent-green);
+}
+
+/* ==========================================================================
+   2. WATCHLIST HEADER & PROGRESS BAR
+   ========================================================================== */
+
+.watchlist-section {
+    margin-bottom: 40px;
+}
+
+.watchlist-header-bar {
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.progress-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.watchlist-title-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.btn-reset-small {
+    background: transparent;
+    border: 1px solid var(--border-light);
+    color: var(--text-muted);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn-reset-small:hover {
+    color: #FF5252;
+    border-color: rgba(255, 82, 82, 0.4);
+    background: rgba(255, 82, 82, 0.1);
+}
+
+.progress-stats {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.watched-count {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.stats-separator {
+    color: var(--text-muted);
+}
+
+.percentage-badge {
+    background: var(--accent-green-subtle);
+    color: var(--accent-green);
+    border: 1px solid var(--border-green);
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* PROGRESS BAR */
+.progress-bar-container {
+    width: 100%;
+    height: 14px;
+    background: var(--bg-control);
+    border: 1px solid var(--border-light);
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-green-dark) 0%, var(--accent-green) 100%);
+    border-radius: 100px;
+    transition: width 0.5s ease-out;
+    position: relative;
+}
+
+.progress-glow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: #FFFFFF;
+    opacity: 0.4;
+    filter: blur(4px);
+}
+
+/* ==========================================================================
+   3. SEARCH + FILTERS
+   ========================================================================== */
+
+.controls-section {
+    padding: 20px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.search-box input {
+    width: 100%;
+    background: var(--bg-control);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 14px 44px 14px 48px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.search-box input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-box input:focus {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 15px var(--accent-green-subtle);
+    background: var(--bg-card);
+}
+
+.clear-search-btn {
+    position: absolute;
+    right: 14px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+    padding: 4px;
+}
+
+.clear-search-btn:hover {
+    color: var(--text-primary);
+}
+
+/* FILTER CONTROLS */
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.select-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 170px;
+}
+
+.select-wrapper select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--bg-control);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 12px 36px 12px 16px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.select-wrapper select:focus,
+.select-wrapper select:hover {
+    border-color: var(--border-green);
+    background: var(--bg-card);
+}
+
+.select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   4. UNIVERSE SECTIONS & MOVIE CARDS
+   ========================================================================== */
+
+.universe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.universe-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.universe-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-silver);
+}
+
+.universe-section-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.universe-section-count {
+    font-size: 0.78rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--accent-green);
+    background: var(--accent-green-subtle);
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border-green);
+}
+
+.movie-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* INDIVIDUAL MOVIE CARD */
+.movie-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-silver);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-card:hover {
+    border-color: var(--border-green);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Custom Large Touch Checkbox */
+.custom-checkbox-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox-wrapper input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.checkmark {
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg-control);
+    border: 2px solid var(--text-muted);
+    border-radius: 6px;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-checkbox-wrapper:hover .checkmark {
+    border-color: var(--accent-green);
+}
+
+.custom-checkbox-wrapper input:checked ~ .checkmark {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+    box-shadow: 0 0 10px var(--accent-green);
+}
+
+.checkmark::after {
+    content: '';
+    width: 6px;
+    height: 11px;
+    border: solid #050806;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: var(--transition-fast);
+    margin-bottom: 2px;
+}
+
+.custom-checkbox-wrapper input:checked ~ .checkmark::after {
+    opacity: 1;
+}
+
+.item-number {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    min-width: 24px;
+    flex-shrink: 0;
+}
+
+/* Poster Image */
+.poster-img {
+    width: 44px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+    flex-shrink: 0;
+    background-color: var(--bg-control);
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.movie-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.movie-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: var(--transition-fast);
+}
+
+/* IMPORTANCE BADGES */
+.importance-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.importance-badge.essential {
+    background: rgba(220, 38, 38, 0.18);
+    color: #EF4444;
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    box-shadow: 0 0 8px rgba(220, 38, 38, 0.15);
+}
+
+.importance-badge.important {
+    background: rgba(234, 179, 8, 0.18);
+    color: #FACC15;
+    border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.importance-badge.optional {
+    background: rgba(156, 163, 175, 0.15);
+    color: #E5E7EB;
+    border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+.movie-meta {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.meta-dot {
+    color: var(--text-muted);
+    font-size: 0.6rem;
+}
+
+.universe-tag {
+    color: var(--text-muted);
+}
+
+/* WHERE TO WATCH BUTTON */
+.btn-where-to-watch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-control);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.btn-where-to-watch:hover {
+    background: var(--accent-green-subtle);
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+    box-shadow: 0 0 12px var(--accent-green-subtle);
+}
+
+/* COMPLETED CARD APPEARANCE */
+.movie-card.watched {
+    background: rgba(13, 21, 16, 0.5);
+    border-color: var(--accent-green-dark);
+}
+
+.movie-card.watched .movie-title {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+    opacity: 0.85;
+}
+
+.movie-card.watched .poster-img {
+    filter: opacity(0.65) grayscale(30%);
+}
+
+.movie-card.watched .item-number {
+    color: var(--accent-green);
+}
+
+/* EMPTY STATE */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background: var(--accent-green);
+    color: #050806;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background: var(--accent-green-bright);
+    box-shadow: 0 0 15px var(--accent-green);
+}
+
+/* ==========================================================================
+   5. MODAL OVERLAY
+   ========================================================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    max-width: 440px;
+    width: 100%;
+    padding: 28px;
+    text-align: center;
+    border: 1px solid var(--border-green);
+}
+
+.modal-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background: var(--bg-control);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background: #DC2626;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background: #EF4444;
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+
+.footer {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-light);
+    margin-top: 40px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   7. MOBILE RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 640px) {
+    .main-title {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 0.78rem;
+        letter-spacing: 1.5px;
+    }
+
+    .doomsday-title-steel {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    .doomsday-sub-emerald {
+        font-size: 1.8rem;
+        letter-spacing: 5px;
+    }
+
+    /* 2x2 COUNTDOWN BLOCKS ON MOBILE */
+    .countdown-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .time-colon {
+        display: none;
+    }
+
+    .time-block {
+        min-width: unset;
+        padding: 12px 10px;
+    }
+
+    .time-number {
+        font-size: 2.2rem;
+    }
+
+    /* SEARCH + FILTERS FULL WIDTH & STACKED */
+    .filter-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .select-wrapper {
+        width: 100%;
+        min-width: unset;
+    }
+
+    /* ONE-COLUMN MOVIE CARDS WITH WHERE TO WATCH BELOW TITLE */
+    .movie-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .card-left {
+        width: 100%;
+    }
+
+    .btn-where-to-watch {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        margin-top: 4px;
+    }
+
+    /* INCREASE CHECKBOX TOUCH TARGET */
+    .custom-checkbox-wrapper {
+        width: 32px;
+        height: 32px;
+    }
+
+    .poster-img {
+        width: 40px;
+        height: 58px;
+    }
+
+    .watchlist-header-bar {
+        padding: 16px;
+    }
+
+    .progress-info-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
