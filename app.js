@@ -77,9 +77,9 @@ const MARVEL_ROADMAP = [
     { id: "xmen_64", title: "Dark Phoenix", year: 2019, category: "XMEN_FOX", categoryName: "🧬 X-Men / Fox Universe", part: "🧬 X-MEN / FOX UNIVERSE", importance: "OPTIONAL", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSd0-1-NpNWz9-3XmM04kF1sqXeI0ujqFsK4kuHsr-BeobsyPSKdjhZqDbnCJ_YfWZWYOlIg&s=10" },
 
     // 🧪 FANTASTIC FOUR — OTHER UNIVERSES (65 - 67)
-    { id: "f4_65", title: "Fantastic Four", year: 2005, category: "FANTASTIC_FOUR", categoryName: "🧪 Fantastic Four", part: "🧪 FANTASTIC FOUR", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
-    { id: "f4_66", title: "Fantastic Four: Rise of the Silver Surfer", year: 2007, category: "FANTASTIC_FOUR", categoryName: "🧪 Fantastic Four", part: "🧪 FANTASTIC FOUR", importance: "IMPORTANT", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
-    { id: "f4_67", title: "Fantastic Four", year: 2015, category: "FANTASTIC_FOUR", categoryName: "🧪 Fantastic Four", part: "🧪 FANTASTIC FOUR", importance: "OPTIONAL", poster: "https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" },
+    { id: "f4_65", title: "Fantastic Four", year: 2005, category: "FANTASTIC_FOUR", categoryName: "🧪 Fantastic Four", part: "🧪 FANTASTIC FOUR", importance: "IMPORTANT", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWRGXP2N9X5mKJquo3Wojn9UZQAXrWdiMVp7CHx6fI29nCf8TJoozyesfyfSNI8AvQK7P3xw&s=10" },
+    { id: "f4_66", title: "Fantastic Four: Rise of the Silver Surfer", year: 2007, category: "FANTASTIC_FOUR", categoryName: "🧪 Fantastic Four", part: "🧪 FANTASTIC FOUR", importance: "IMPORTANT", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTynd0OwRk9-1-iby-JA2wG-6g_2xqepEJyt-4dUOzLRexZaOWFxSKR4_G78voZqGqoAAUg&s=10" },
+    { id: "f4_67", title: "Fantastic Four", year: 2015, category: "FANTASTIC_FOUR", categoryName: "🧪 Fantastic Four", part: "🧪 FANTASTIC FOUR", importance: "OPTIONAL", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR08-C9fQfhBW1utTh6DluttA0rbRZN9M5i4eTGRe6SsY5xITzIH0dFVgDVL8byo9an1hZe&s=10" },
 
     // 🕷️ SPIDER-MAN UNIVERSES (68 - 74)
     { id: "tobey_68", title: "Spider-Man", year: 2002, category: "SPIDERMAN_UNIVERSES", categoryName: "🕷️ Spider-Man Universes", part: "🕷️ SPIDER-MAN UNIVERSES", importance: "ESSENTIAL", poster: "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" },
